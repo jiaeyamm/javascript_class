@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        section {
+            display: flex;
+        }
+        ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            padding: 0px;
+        }
+        
+        ul li {
+            width: 75px;
+            height: 75px;
+            padding: 5px;
+            overflow: hidden;
+        }
+
+        ul li img {
+            width: 100%;
+        }
+
+        .today {
+            font-weight: 400;
+            color: #f00;
+            
+        }
+        h3 {
+            font-weight: 400;
+        }
+        
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .coupon {
+            color: tomato;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .price {
+            font-size: 40px;
+        }
+
+        .box1 {
+            font-size: 14px;
+            padding: 4px 8px;
+            border: 1px solid #333;
+        }
+
+        .purchase {
+            background: lightgray;
+            padding: 5px 10px;
+            font-weight: bold;
+        }
+
+        .purchase > a {
+            color: darkgray;
+            font-size: 13px;
+        }
+        .photobox {
+        width: 100%;
+        overflow: hidden;
+        margin-left: 0px;
+        }
+
+        #bigimg {
+            width: 100%;
+        }
+
+        article {
+            margin-left: 10px;
+        }
+
+        .on {
+            border: 1px solid purple;
+        }
+
+        li img {
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <h2>자바스크립트 문서객체모델 속성값을 활용한 상품 미리보기 콘텐츠</h2>
+    <p>이미지 다섯장을 사용하여 썸네일 이미지 클릭 시 큰사진이 보이게 하기</p>
+
+    <section class="product">
+        <article class="photo">
+            <div class="photobox">
+            <img src="./images2/photo01.jpg" alt="미리보기" id="bigImg">
+            </div>
+            <!-- 썸네일 클릭 시 해당 속성 src값을 변수에 담아서 출력해본다 -->
+            <ul>
+                <li><img src="./images2/photo01.jpg" alt="썸네일1" class="small"></li>
+                <li><img src="./images2/photo02.jpg" alt="썸네일2" class="small"></li>
+                <li><img src="./images2/photo03.jpg" alt="썸네일3" class="small"></li>
+                <li><img src="./images2/photo04.jpg" alt="썸네일4" class="small"></li>
+                <li><img src="./images2/photo05.jpg" alt="썸네일5" class="small"></li>
+            </ul>
+        </article>
+        
+        <article class="content">
+            <h3><span class="today">오늘 마감</span>
+            <p>[최대 40% 쿠폰] 머렐 헤비다운 외 스포츠 특가</p>
+            </h3>
+            <p><span class="coupon">10%</span> <span class="price">151,200</span>원 ~ <a href="#" title="혜택보기" class="box1">혜택보기</a></p>
+            <p class="purchase"><a href="#" title="적립금">구매 전 적립금 5,000원 받기</a>
+                <a href="#" title="무이자">카드 무이자 혜택보기(최대 6개월)</a></p>
+        </article>
+
+    </section>
+
+    <script> 
+
+        let photo = document.querySelector('#bigImg');
+
+        let s_img = document.querySelectorAll('.small');
+
+        for(let i=0; i < s_img.length; i++) {
+                s_img[i].addEventListener('click', changePic); }
+        // 이미지를 각각 클릭하면 해당함수가 실행된다.
+        function changePic () {
+            let newPic = this.src; // 사용자가 선택한 이미지 속성을 변수에 담는다.
+            // big_img의 src속성값에 바뀌는 src 대입
+            photo.setAttribute('src', newPic);
+
+            for(let j=0; j < s_img.length; j++) {            
+            s_img[j].style.border = 'none'; // 모두 서식을 제거하고
+            this.style.border = '1px solid blue'; // 선택한 썸네일 이미지에 테두리 적용}
+            
+        }
+    }
+    </script>
+</body>
+</html>

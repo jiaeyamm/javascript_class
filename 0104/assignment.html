@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        ul {
+            list-style: none;
+        }
+
+        .menu {
+            height: 40px;
+            display: flex;
+            width: 100%;
+            justify-content: left;
+            
+        }
+
+        .menu li {
+            text-align: center;
+            padding: 0px 20px;
+            }
+
+        .menu li:first-child {
+            color: tomato;
+        }
+
+        .gallery {
+            display: flex;
+            padding-left: 0px;
+            text-align: center;
+            border: 2px solid black;
+            margin-bottom: 50px;
+        }
+
+        .gallery li img {
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        .mainphoto {
+            text-align: center;
+        }
+        
+        .fas {
+            background: rgba(0, 0, 0, .1);
+            width: 30px;
+            font-size: 40px;
+            color: #fff;
+            position: absolute;
+        }
+
+        .fa-angle-left {
+            left: 10px;
+            top: 50%;
+        }
+
+        .fa-angle-right {
+            right: 10px;
+            top: 50%;
+        }
+
+        .on {
+            border: 2px solid red;
+        }
+
+        .title {
+            display: flex;
+            padding: 15px 0px;
+        }
+
+        #photonum {
+            transform: translate(5px, 5px);
+        }
+    </style>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body>
+    <div class="title">
+    <h2>포토</h2>
+    <div id="photonum">&nbsp;</div>
+    </div>
+    <hr>
+    <ul class="menu">
+        <li>스틸컷(8건)</li>
+        <li>프로모션(19건)</li>
+        <li>포스터(11건)</li>
+    </ul>
+    <div class="imgbox">
+    <ul class="gallery">
+        <li><img src="./images3/movie_image01.jpg" alt="썸네일1" class="small on" data-index="1"></li>
+        <li><img src="./images3/movie_image02.jpg" alt="썸네일2" class="small" data-index="2"></li>
+        <li><img src="./images3/movie_image03.jpg" alt="썸네일3" class="small" data-index="3"></li>
+        <li><img src="./images3/movie_image04.jpg" alt="썸네일4" class="small" data-index="4"></li>
+        <li><img src="./images3/movie_image05.jpg" alt="썸네일5" class="small" data-index="5"></li>
+        <li><img src="./images3/movie_image06.jpg" alt="썸네일6" class="small" data-index="6"></li>
+        <li><img src="./images3/movie_image07.jpg" alt="썸네일7" class="small" data-index="7"></li>
+        <li><img src="./images3/movie_image08.jpg" alt="썸네일8" class="small" data-index="8"></li>
+    </ul>
+    </div>
+    <div class="mainphoto">
+        <img src="./images3/movie_image01.jpg" alt="배너1" id="bigImg">
+        <i class="fas fa-angle-left" id="prev"></i>
+        <i class="fas fa-angle-right" id="next"></i>
+    </div>
+
+<script>
+    let n = 1;
+    let small = document.querySelectorAll('.small')
+    let bigImg = document.getElementById('bigImg');
+    for(let i = 0; i < small.length; i++) {
+        small[i].addEventListener('click', imgChange);
+
+    }
+
+    function imgChange() {
+        let imgSrc = this.src;
+        document.getElementById('bigImg').src=imgSrc;
+        document.querySelector('ul > li > img.on').classList.remove('on');
+        this.classList.add('on');
+        for(var i = 1; i < small.length; i++) {
+            var index = this.getAttribute('data-index');
+        }
+        document.getElementById('photonum').innerHTML = index + '/8'
+        }
+    
+
+    document.getElementById('photonum').innerHTML = n + '/8'
+    document.getElementById('next').addEventListener('click', nextImg);
+    document.getElementById('prev').addEventListener('click', prevImg)
+
+    function nextImg() {
+        if(n == 8) {
+            n=1;
+        } else {
+            n++;
+        } 
+        document.getElementById('bigImg').src='./images3/movie_image0'+ n + '.jpg';
+        document.getElementById('photonum').innerHTML= n + '/8'
+        for(let j=0; j < small.length; j++) {
+            if(bigImg.src == small[j].src) {
+                small[j].classList.add('on');
+            } else {
+                small[j].classList.remove('on');
+            }
+        } 
+    } 
+
+    function prevImg () {
+        if (n == 1) {
+            n = 8;
+        } else {
+            n--;
+        }
+
+        document.getElementById('bigImg').src='./images3/movie_image0' + n + '.jpg';
+        document.getElementById('photonum').innerHTML=n + '/8'
+
+        for(let j=0; j < small.length; j++) {
+            if(bigImg.src == small[j].src) {
+                small[j].classList.add('on');
+            } else {
+                small[j].classList.remove('on');
+            }
+        } 
+    }
+
+
+</script>
+</body>
+</html>  

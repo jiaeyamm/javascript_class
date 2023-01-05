@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>popup</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        div {
+            width: 360px;
+            height: 365px;
+        }
+
+        div > p {
+            background-color: #000;
+            line-height: 40px;
+            text-align: center;
+        }
+
+        input[type=button] {
+            background : none;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+    <a href="#" title="">
+        <img src="./images/banner.jpg" alt="">
+    </a>
+    <p><input type="button" value="닫기" onclick="self.close();"></p>
+    </div>
+<!-- window.close(); or self.close();-->
+</body>
+</html>

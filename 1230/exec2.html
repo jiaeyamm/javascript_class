@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        ul {
+            margin-top: 5px;
+            width: 370px;
+            list-style: none;
+            height: 270px;
+            position: absolute;
+            counter-reset: list-number;
+        }
+
+        ul li {
+            font-size: 18px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            line-height: 35px;
+            text-indent: 10px;
+            counter-increment: list-number;
+        }
+
+        ul li::before {
+            content: counter(list-number);
+            color: darkblue;
+            font-size: 18px;
+            font-weight: bold;
+            padding-right: 10px;
+        }
+        main {
+            width: 380px;
+        }
+        
+        .news_head {
+            margin : 10px 0px 10px 10px;
+            display: flex;
+            justify-content: space-around;
+            border-bottom: 2px solid #ccc;
+            position: relative;
+        }
+        
+        input[type=button] {
+            background-color: #fff;
+            border: none;
+            padding: 10px;
+            color: #ccc;
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        h2 {
+            font-size: 18px;
+            transform: translateY(8px);
+        }
+        input[value="MBC"] {
+            color: darkblue;
+        }
+        .news_list {
+            display: flex;
+        }
+        
+        .mbs_list {
+            left:0px;
+        }
+
+        .portal_list, .sns_list, .youtube_list {
+            display: none;
+        }
+
+/* .tab_mnu_list li.on. cont {
+    display: block; 
+    
+    on class가 적용된 li 태그만 나오게끔 하라 
+    
+    */
+    </style>
+</head>
+<body>
+    <main>
+    <article class="news_head">
+    <h2>많이 본 뉴스</h2>
+        <input type="button" value="MBC" id="mbcBtn">
+        <input type="button" value="포털" id="portalBtn">
+        <input type="button" value="SNS" id="snsBtn">
+        <input type="button" value="유튜브" id="youtubeBtn">
+    </article>
+    <section class="news_list">
+    <article>
+        <ul class="mbc_list">
+            <li>'연쇄살인범' 신상 공개 31살 이기영</li>
+            <li>'제2경인고속화재' 최초 화재 운전자 입건되다</li>
+            <li>'신생아4명 사망' 이대목동병원 의료진 무슨 일이여</li>
+            <li>한 총리 "중국발 입국 전후 코로나 검사 의미가 있나욜?"</li>
+            <li>[World Now]영면에 든 펠레 예전 활약을 되새겨보며</li>
+            <li>올해 소비자물가 5.1% 증가 외환위기 이후 최대</li>
+            <li>미국서 한국산 전기차도 '리스 차량'은 보조금</li>
+        </ul>
+    </article>
+
+    <article>
+        <ul class="portal_list">
+            <li>[단독]숨진 빌라왕 송 모 씨 "일감 받아 심심하지 않았어"</li>
+            <li>[단독]운동선수 유흥업소 '선수'까지 뇌전이 어쨌다는 거야</li>
+            <li>잿더미 된 차량 그대로 이 시각 갈현고가교</li>
+            <li>"차 두고 뛰쳐나와" 순식간에 번진 불길에 '아찔'</li>
+            <li>윤 대통령 "우월한 전쟁 준비해야" vs  野"전쟁은 안 돼"</li>
+            <li>'연쇄 살인범' 신상 공개 31살 이기영</li>
+            <li>[단독]빌라왕 뒤의 빌라왕 끝은 어디인가?</li>
+            <li>플라스틱 방화벽 타고 빠르게 확산</li>
+            <li>러, 또 대규모 공습 벨라루스 "미사일 격추"</li>
+            <li>미국서 한국산 전기차도 '리스 차량'은 보조금</li>
+        </ul>
+    </article>
+
+    <article>
+        <ul class="sns_list">
+            <li>황희찬 역전골, 팬들이 뽑은 'KFA 올해의 골'</li>
+            <li>MBC, 가장 즐겨보는 뉴스 채널 1위</li>
+            <li>[World Now]영면에 든 펠레 예전 활약을 되새겨보며</li>
+            <li>'축구 전설'로 남은 펠레 암투병 끝 별세</li>
+            <li>경북 구미 고소독로서 연쇄 추돌 2명 사망</li>
+            <li>[단독]숨진 빌라왕 송 모 씨 "일감 받아 심심하지 않았어"</li>
+            <li>[와글와글]"네가 왜 거기서 나와" 대형 마트 어쩌고</li>
+            <li>전주 얼굴 없는 천사 23년간 8억8천여만원 기부한 것으로 알려져</li>
+            <li>마침내 달 품은 '다누리' 우려 씻어낸 완벽어쩌고</li>
+            <li>'주거침입 혐의'더탐사 대표 구속영장 기각</li>
+        </ul>
+    </article>
+
+    <article>
+        <ul class="youtube_list">
+            <li>오늘 새벽 또 무인기 소동 굉음에 놀라 깜놀해</li>
+            <li>[뉴스외전 경제'쏙']'1/4토막' 테슬라의 몰락 내 주식 어케</li>
+            <li>"차 두고 뛰쳐나와" 순식간에 번진 불길에 '아찔'</li>
+            <li>[와글와글]"네가 왜 거기서 나와" 대형 마트 어쩌고</li>
+            <li>'비밀 경찰서'의심 중식당 "추악한 세력 폭로한다."</li>
+            <li>"도대체 뭐한 거냐"대통령 질책에 군 "억울해요."</li>
+            <li>[와글와글]"아무도 없다 훔치자!" 재해 틈 타 도둑놈들 뭐임</li>
+            <li>"김정은이 남친인가?"미국, 독일에서 인종차별하네 </li>
+            <li>[단독]숨진 빌라왕 송 모 씨 "일감 받아 심심하지 않았어"</li>
+        </ul>
+    </main>
+    </article>
+</section>
+
+<script>
+    let mbcBtn = document.getElementById('mbcBtn');
+    let portalBtn = document.getElementById('portalBtn');
+    let snsBtn = document.getElementById('snsBtn');
+    let youtubeBtn = document.getElementById('youtubeBtn');
+
+    mbcBtn.addEventListener('click', function() {
+        document.querySelector('.portal_list').style.display = 'none';
+        document.querySelector('.mbc_list').style.display = 'block';
+        document.querySelector('.youtube_list').style.display = 'none';
+        document.querySelector('.sns_list').style.display = 'none';
+
+        mbcBtn.style.color = 'darkblue';
+        portalBtn.style.color = '#ccc';
+        snsBtn.style.color = '#ccc';
+        youtubeBtn.style.color = '#ccc';
+    })
+
+    portalBtn.addEventListener('click', function() {
+        document.querySelector('.portal_list').style.display = 'block';
+        document.querySelector('.mbc_list').style.display = 'none';
+        document.querySelector('.youtube_list').style.display = 'none';
+        document.querySelector('.sns_list').style.display = 'none';
+
+        mbcBtn.style.color = '#ccc';
+        portalBtn.style.color = 'darkblue';
+        snsBtn.style.color = '#ccc';
+        youtubeBtn.style.color = '#ccc';
+    })
+
+    snsBtn.addEventListener('click', function() {
+        document.querySelector('.portal_list').style.display = 'none';
+        document.querySelector('.mbc_list').style.display = 'none';
+        document.querySelector('.youtube_list').style.display = 'none';
+        document.querySelector('.sns_list').style.display = 'block';
+
+        
+        mbcBtn.style.color = '#ccc';
+        portalBtn.style.color = '#ccc';
+        snsBtn.style.color = 'darkblue';
+        youtubeBtn.style.color = '#ccc';
+    })
+
+    youtubeBtn.addEventListener('click', function() {
+        document.querySelector('.portal_list').style.display = 'none';
+        document.querySelector('.mbc_list').style.display = 'none';
+        document.querySelector('.youtube_list').style.display = 'block';
+        document.querySelector('.sns_list').style.display = 'none';
+
+                
+        mbcBtn.style.color = '#ccc';
+        portalBtn.style.color = '#ccc';
+        snsBtn.style.color = '#ccc';
+        youtubeBtn.style.color = 'darkblue';
+    })
+
+/*
+    //1. 탭메뉴 목록 변수 선언
+    const tabList = document.querySelectorAll('.tab_mun .ist li')
+
+    //2. for문을 사용하여 사용자가 선택한 항목에 대한 목록만 나오게 한다.
+    for(let i=0; i < tabList.length ; i++) { // li 태그의 갯수만큼만 반복실행한다.
+        tabList[i].querySelector('.btn').addEventListener('click, function(e) {
+        
+    })
+}    
+
+*/  
+</script>
+</body>
+</html>
