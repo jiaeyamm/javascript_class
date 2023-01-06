@@ -2,11 +2,109 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>자바스크립트 index</title>
+    <title>자바스크립트와 제이쿼리 index</title>
+    <style>
+        * {
+            margin: 0px; padding: 0px; font-style: "맑은 고딕",arial,sans-serif; 
+            /* 대체 문자 1번(맑은고딕), 2번(arial), 3번(sans-serif) */ font-size: 12px;
+            color: #333333;
+        }
+        h1, h2 {
+            text-align: center;
+            padding: 16px 0px;
+        }
+        h1 img {
+            /* width: 100px; height:; */
+        }
+        h2 { line-height: 40px;}
+        .border01 {
+            border-top: 3px solid #EEE7DB;
+            border-bottom: 3px solid #EEE7DB;
+        }
+
+        .bgcolor01 {
+            background-color: #EEE7DB;
+        }
+        dl {
+            text-indent: 10px;
+        }
+        dt {
+            font-size: 14px;
+            color : #333;
+            padding: 12px 0px;
+            font-weight: bold;
+            border-bottom: 1px solid #ffffff;
+        }
+        dd { border-bottom: 1px solid #cccccc; text-indent: 16px;} 
+        dd > a {
+            display: block;
+            font-size: 13px;
+            line-height: 40px;
+            color: #333333;
+            text-decoration: none;
+        }
+        dd > a:hover {
+            background-color: #EEE7DB;
+            font-weight: bold;
+        }
+        footer {
+            background-color: black;
+            text-align: center;
+            line-height: 50px;
+        }
+        footer > address {
+            font-style: normal;
+            color: #ffffff;
+        }
+    </style>
 </head>
 <body>
-    
+    <header>
+    <h1><a href="./index.html" title="메뉴로 돌아가기">
+    <img src="./1205/html5.png" title="로고"></a>
+    </h1>
+</header>
+<main>
+    <section class="border01"></section>
+    <h2>JavaScript</h2>
+    <dl>
+        <dt class="bgcolor01">[ 1회차 12/21 ] 자바스크립트 변수</dt>
+        <dd><a href="./1221/variable.html" title="html5"> 1) 변수 선언과 작성법</a></dd>
+        <dd><a href="./1221/jsdocument.html" title="semantics">2) 자바스크립트 문서 출력 방법</a></dd>
+    </dl>
+    <dl>
+        <dt class="bgcolor01">[ 2일차 12/22 ] 변수 복습 </h></dt>
+        <dd><a href="./1222/varibale2.html" title="제목태그"> 1) 변수 복습</a></dd>
+        
+
+    </dl>
+    <dl>
+        <dt class="bgcolor01">[ 3일차 12/23 ] img, svg, a, iframe, table </dt>
+        <dd><a href="./1201/07_img.html" title="이미지"> 1) img : 이미지 태그</a></dd>
+        <dd><a href="./1201/08_SVG.html" title="svg"> 2) SVG </a></dd>
+        <dd><a href="./1201/09_link.html" title="링크"> 3) a : 하이퍼링크 태그</a></dd>
+        <dd><a href="./1201/10_iframe.html" title="아이프레임"> 4) iframe : 연결 태그 </a></dd>
+        <dd><a href="./1201/ex_mobile_.index.html" title="실습예제 1"> 5) 실습예제 1 낭만여행 모바일 메인 화면</a></dd>
+        <dd><a href="./1201/ex_recipe.html" title="실습예제 2">6) 실습예제 2 음식 레시피</a></dd>
+        <dd><a href="./1201/ex_hyundai.html" title="실습예제 3">7) 실습예제 3 현대자동차 홈페이지</a></dd>
+    </dl>
+    <dl>
+        <dt class="bgcolor01">[ 4일차 12/02 ] table, form/form-add </dt>
+        <dd><a href="./1202/11_table.html" title="테이블태그"> 1) table : 표 태그 </a></dd>
+        <dd><a href="./1202/12_form.html" title="폼태그"> 2) form - input : 폼 태그</a></dd>
+        <dd><a href="./1202/13_formadd.html" title="폼애드"> 2-2) form-add - input : 폼 태그 2</a></dd>
+        <dd><a href="./1202/table_ex.html" title="실습예제 1"> 3) 실습예제 1 게시판표</a></dd>
+        <dd><a href="./1202/ex1_board.html" title="실습과제 1"> 4) 실습과제 1 글작성 양식 </a></dd>
+        <dd><a href="./1202/ex2_sign_in.html" title="실습과제 1"> 5) 실습과제 2 문의하기 양식 </a></dd>
+    </dl>
+    <dl>
+        <dt class="bgcolor01">[ 5일차 12/05 ] media </dt>
+        <dd><a href="./1205/14_multimedia.html" title="미디어"> 1) audio, video : 미디어 태그</a></dd>
+    </dl>
+</main>
+<footer>
+    <address>Copyright&copy; 2022 HTML/CSS3 학습페이지 allrights reserved.</address>
+</footer>
 </body>
 </html>
