@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        header {
+            width: 1920px;
+            background: #ccc;
+        }
+        
+        .top_banner {
+            width: 1300px;
+            margin: 0px auto;
+            position: relative;
+        }
+
+        i.mark {
+            background-color: rgba(0,0,0,.7);
+            color: #fff;
+            height: 25px;
+            width: 25px;
+            line-height: 25px;
+            text-align: center;
+            font-size: 25px;
+            position: absolute;
+            top:25px;
+            right: -70px;
+            
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            
+            let mark = $('.mark');
+            mark.click(function() {
+                $('.top_banner').slideUp();
+            })
+        })
+    </script>
+</head>
+<body>
+    <header>
+        <div class="top_banner">
+            <img src="./images/coupang_02.jpg" alt="쿠팡배너">
+            <i class="fa-solid fa-xmark mark"></i>
+        </div>
+    </header>
+</body>
+</html>
