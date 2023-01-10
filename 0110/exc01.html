@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>starbucks main page</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        article {
+            width: 2000px;
+            height: 646px;
+            background-image: url(./exec02/images/bev_bg.jpg);
+            position: relative;
+        }
+
+        div img{
+            position: absolute;
+        }
+
+        .menu1 img:first-child {
+            top:40px;
+            right: 620px;
+        }
+
+        .menu1 img:last-child {
+            top:80px;
+            right: 800px;
+        }
+
+        .menu2 img:first-child {
+            top:200px;
+            right: 670px;
+        }
+
+        .menu2 img:last-child {
+            top:220px;
+            right: 930px;
+        }
+
+        .menu3 img:first-child {
+            top:240px;
+            right: 420px;
+        }
+
+
+        .menu3 img:last-child {
+            top:170px;
+            right: 470px;
+        }
+
+        div {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <div class="menu1">      
+        <img src="./exec02/images/bev1_cup.png" alt="컵사진1">
+        <img src="./exec02/images/bev1_txt.png" alt="컵사진1설명">
+        </div> 
+        <div class="menu2">
+        <img src="./exec02/images/bev2_cup.png" alt="컵사진2">
+        <img src="./exec02/images/bev2_txt.png" alt="컵사진2설명">
+        </div>
+        <div class="menu3">
+        <img src="./exec02/images/bev3_cup.png" alt="컵사진3">
+        <img src="./exec02/images/bev3_txt.png" alt="컵사진3설명">
+        </div>
+    </article>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function() {
+
+            // 1. 초기값 
+            let n = 0;
+            // 2. 함수만들기 fadeInimg
+            function fadeInimg() {
+                if(n==3) {
+                    $('article div').stop().fadeOut('slow'); 
+                    n=0;
+                } else {
+                    $('article div').eq(n).stop().fadeIn('slow'); 
+                    n++;
+                }
+            }
+            
+                let Timer = setInterval(fadeInimg, 1500);
+                
+                // 5. 정지버튼을 누르면 시간을 정지, 플레이버튼으로 변경되게 하고 다시 누르면 시간을 재생하기 
+        });
+
+    </script>
+</body>
+</html>
