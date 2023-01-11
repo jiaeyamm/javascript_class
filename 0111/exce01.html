@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Skill</title>
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    article {
+        width: 700px;
+        border: 1px solid lavenderblush;
+        position: relative;
+        height: 200px;
+        padding: 50px 0px 0px 20px;
+        margin: 100px auto;
+        border-radius: 10px;
+        background-color:lavenderblush;
+        color: #333;
+    
+    }
+    ul, li {
+        list-style: none;
+    }
+
+    h3 { 
+        border: 1px solid #ccc;
+        width: 120px;
+        text-align: center;
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 10%;
+        height: 40px;
+        line-height: 40px;
+        text-transform: uppercase;
+        background-color: #fff;
+        
+
+    }
+    .bar {
+        width: 500px;
+        height: 20px;
+        background-color:lightsteelblue;
+        position: relative;
+    }
+    
+    .html_tag, .css, .js, .jq {
+        background-color:paleturquoise;
+        height: 20px;
+        position: absolute;
+    }
+
+    ul li {
+        padding-top: 7px;
+    }
+
+    ul {
+        padding-top: 10px;
+    }
+
+    div {
+        display: inline-block;
+
+    }
+
+    span {
+        width: 75px;
+        display: inline-block;
+        transform: translateY(-5px);
+    }
+
+    .percent {
+        width: 75px;
+        margin-left: 10px;
+    }
+</style>
+
+    <!-- 제이쿼리 라이브러리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <!-- 제이쿼리 UI라이브러리 -->
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+        $(document).ready(function(){
+
+
+        $('article').mouseenter(function(){
+            $('.html_tag').animate({'width':'300px'}, 1000,'easeOutElastic')
+            $('.css').animate({'width':'300px'}, 1000, 'swing')
+            $('.js').animate({'width':'50px'}, 1000, 'swing')
+            $('.jq').animate({'width':'100px'}, 1000, 'swing')
+            });
+
+            $('article').mouseleave(function(){
+            $('.html_tag').animate({'width':'0px'}, 1000, 'swing')
+            $('.css').animate({'width':'0px'}, 1000, 'swing')
+            $('.js').animate({'width':'0px'}, 1000, 'swing')
+            $('.jq').animate({'width':'0px'}, 1000, 'swing')
+            });
+
+            
+        })
+
+
+
+
+    </script>
+<body>
+    <article>
+        <h3>my skill</h3>
+        <ul>
+            <li><span>HTML</span>
+                <div class="bar">
+                    <div class="html_tag"></div>
+                </div> 
+                <span class="percent">60%</span>
+            </li>
+            <li><span>CSS</span>
+                <div class="bar">
+                    <div class="css"></div>
+                </div> 
+                <span class="percent">60%</span>
+            </li>
+            <li><span>JavaScript</span>
+                <div class="bar">
+                    <div class="js"></div>
+                </div> 
+                <span class="percent">10%</span></li>
+            <li>
+                <span>JQuery</span>
+                <div class="bar">
+                    <div class="jq"></div>
+                </div> 
+                <span class="percent">20%</span>
+            </li>
+        </ul>
+    </article>
+</body>
+</html>

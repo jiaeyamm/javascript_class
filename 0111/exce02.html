@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>헬로우 스티브</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .box {
+            width: 1000px;
+            border: 5px solid #333;
+            height: 600px;
+            position: relative;
+            overflow: hidden;
+            margin: 0px auto;
+        }
+        div img {
+            position: absolute;
+        }
+        div img:first-child {
+            width: 300px;
+            left: -300px;
+            top:200px;
+        }
+
+        div img:nth-child(2) {
+            width: 750px;
+            height: 100%;
+            bottom: -750px;
+            right: 0px;
+        }
+
+    </style>
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<!-- 제이쿼리 UI라이브러리 -->
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<script>
+    $(document).ready(function(){
+
+        function slidePhoto () {
+            
+            $('.jobs_name').animate({'top':'200px', 'left':'10px'}, 1000)
+            $('.jobs_p').animate({'right':'0px','bottom':'0px'}, 1300)
+
+        };
+
+        slidePhoto();
+
+    })
+
+
+</script>
+<body>
+    <div class="box">
+        <img src="./images/jobs_text.gif" alt="잡스 이름" class="jobs_name">
+        <img src="./images/jobs.png" alt="잡스 사진" class="jobs_p">
+    </div>
+</body>
+</html>
