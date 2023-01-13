@@ -137,7 +137,7 @@ article {
 
 .slide {
     width: 100%;
-  /*  height: 697px;*/
+    height: 697px;
     margin: 0px auto;
 }
 
@@ -147,8 +147,8 @@ article {
 }
 
 .slide > ul > li {
-    width:100%;
-  /*  height: 697px;*/
+    width: 100%;
+    height: 697px;
 }
 
 .slide > ul > li img {
@@ -157,7 +157,7 @@ article {
 
 .slide i.fas {
     color: #ccc;
-    font-size: 60px;
+    font-size: 80px;
     border: 3px solid #ccc;
     width: 80px;
     height: 80px;

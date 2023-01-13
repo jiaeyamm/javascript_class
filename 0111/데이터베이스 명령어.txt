@@ -1,0 +1,40 @@
+데이터베이스 조회 : show databases;
+데이터베이스 선택 : use 데이터베이스명;
+테이블 조회 : show 테이블명;
+테이블 선택 
+테이블 만들기 : create table 테이블명(데이터형식);
+테이블 안에 데이터 입력 : insert into
+테이블 안에 데이터 조회 : desc 테이블명
+테이블 삭제 : drop table 테이블명
+* 테이블 생성하기
+create table fruit(name varchar(20) default '' not null, price int(10), color varchar(20), country varchar(20), primary key(name));
+----------------------------------------------------------
+varchar : 문자타입의 데이터
+int : 정수형 데이터
+primary key : 기본키(데이터의 중심이되는 이름)
+---------------------------------------------------
+* 테이블 조회 : show tables;
+* 테이블 속성 조회 : desc fruit;
+* 데이터 삽입하기
+insert into 테이블명(필드명1) values ('값1');
+insert into fruit values('Apple', 1000, 'Red', 'korea'); 
+insert into fruit values('Pear', 2000, 'Yellow', 'korea');
+insert into fruit values('Peach', 2000, 'Pink', 'korea');
+insert into fruit values('Watermelon', 500, 'Green', 'korea');
+insert into fruit values('Persimmon', 5000, 'Orange', 'korea');
+insert into fruit values('Tomato', 6000, 'Red', 'usa');
+insert into fruit values('Banana', 7000, 'Yellow', 'indonesia');
+insert into fruit values('Kiwi', 8000, 'Green', 'new zealand');
+insert into fruit values('pineapple', 9000, 'Green', 'indonesia');
+insert into fruit values('jujube', 10000, 'Green', 'china');
+* 데이터조회 : select * from fruit;
+
+* 테이블 삭제 : drop table 테이블명;
+* 테이블 데이터 조회 : select * from fruit;
+* data수정하기
+ update 테이블명 set 필드명='값' where 필드명='값';
+ update fruit set country='korea' where country='????';
+
+
+
+

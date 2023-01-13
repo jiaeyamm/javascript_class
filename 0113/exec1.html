@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 제이쿼리 라이브러리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <!-- 제이쿼리 UI라이브러리 -->
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+
+        $(function(){
+
+            let n = $('.s_btn li').index();
+            console.log(n);
+
+            let img_w = $('.slide img').width();
+            console.log(img_w);
+
+            $('.s_btn li').click(function(){
+                n = $(this).index();
+                console.log(n);
+                $('.slide').stop().animate({'margin-left': -img_w * n});
+                $('.s_btn li').removeClass('on');
+                $(this).attr('class', 'on');
+            })
+        
+            function autoSlide(n) {
+                n = -(n*$('.slide img').width());
+                $('.slide').animate({'margin-left':n}, 2000);
+            }
+
+
+            let Timer = setInterval(function() {
+                if(n==2) {
+                    n=0;
+                    $('.s_btn li').removeClass('on');
+                    $('.s_btn li').eq(n).addClass('on');
+                } else {
+                    n++;
+                    $('.s_btn li').removeClass('on');
+                    $('.s_btn li').eq(n).addClass('on');
+
+                }
+                autoSlide(n);
+            }    
+            , 2000);
+            
+            $('.s_btn').hover(function() {
+                clearInterval(Timer);
+            }, function(){
+                Timer = setInterval(function() {
+                if(n==2) {
+                    n=0;
+                    $('.s_btn li').removeClass('on');
+                    $('.s_btn li').eq(n).addClass('on');
+                } else {
+                    n++;
+                    $('.s_btn li').removeClass('on');
+                    $('.s_btn li').eq(n).addClass('on');
+
+                }
+                autoSlide(n);
+            }    
+            , 2000);
+            });
+
+
+            $('i.fa-stop').click(function() {
+                clearInterval(Timer);
+                Timer = false;
+            })
+
+            $('i.fa-play').click(function(){
+
+            if(!Timer) {
+                Timer = setInterval(function() {
+    
+            if(n==2) {
+            n=0;
+            $('.s_btn li').removeClass('on');
+            $('.s_btn li').eq(n).addClass('on');
+            } else {
+                n++;
+            $('.s_btn li').removeClass('on');
+            $('.s_btn li').eq(n).addClass('on');
+
+            }
+            autoSlide(n);
+            }    
+            , 2000);
+        }});
+
+    });
+
+
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }  
+
+    ul, li {
+        list-style: none;
+    }
+
+    .slide {
+        display: flex;
+    }
+
+    article {
+        margin: 50px auto;
+        height: 378px;
+        width: 340px;
+        border: 3px solid #333;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .s_btn {
+        display: flex;
+        position: absolute;
+        bottom: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+}
+    
+    .s_btn li {
+        width: 13px;
+        height: 13px;
+        background-color: #fff;
+        margin-right: 15px;
+        border-radius: 50%;
+    }
+
+
+
+    i.fa-solid {
+        position: absolute;
+        right: 0px;
+        bottom: 15px;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+    }
+
+    i.fa-play {
+        right: 20px;
+    }
+
+    .on {
+        width: 40px !important;
+        background-color: rgba(0, 0, 0, .5) !important;
+        border-radius: 5px !important;
+    }
+</style>
+<body>
+    <article>
+        <ul class="slide">
+            <li>
+                <a href="#" title="슬라이드 배너1">
+                    <img src="./images/01-1.jpg" alt="이미지1">
+                </a>
+            </li>
+            <li>
+                <a href="#" title="슬라이드 배너2">
+                    <img src="./images/02-1.jpg" alt="이미지2">
+                </a>
+            </li>
+            <li>
+                <a href="#" title="슬라이드 배너3">
+                    <img src="./images/03-1.jpg" alt="이미지3">
+                </a>
+            </li>
+        </ul>
+
+        <ul class="s_btn">
+            <li class="on">&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+        </ul>
+
+        <i class="fa-solid fa-play"></i>
+        <i class="fa-solid fa-stop"></i>
+
+    </article>
+</body>
+</html>
