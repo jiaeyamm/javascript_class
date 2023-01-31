@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+</head>
+<script>
+    $(function(){
+ /*        $('.page li').click(function(){
+         $(this).css({'background-color':'dodgerblue','color':'#fff'});
+            $(this).siblings().css({'background-color':'#fff','color':'dodgerblue'})
+            if($(this).hasClass('ctrl_btn') == false) {
+                $(this).addClass('on').siblings().removeClass('on');
+            } 
+        })
+        */
+       
+        $('.page li').not('.ctrl').click(function() {
+            $(this).addClass('on').siblings().removeClass('on');
+        })
+    })
+</script>
+<style>
+    ul {
+        list-style: none;
+        padding: 10px;
+        margin: 0px;
+        display: flex;
+    }
+
+    ul li {
+        padding: 5px 10px;
+        border: 1px solid gray;
+        width: 10px;
+        color: dodgerblue;
+    }
+
+
+    .on {
+        background-color: dodgerblue;
+        color: #fff;
+    }
+</style>
+<body>
+
+    <h3>실습예제 - 닷홈 공지사항 페이지 번호</h3>
+
+    <ul class="page">
+        <li>&#60;</li>
+        <li class="on">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li class="ctrl">&#62;</li>
+        <li class="ctrl">&#187;</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./FAQ2.css"">
+    <!-- 폰트 어썸 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- 구글 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script>
+        $(function() {
+            // 변수 선언
+
+            let q = $('.faq > dt');
+
+            q.click(function() {
+                $(this).next().toggleClass('on');
+                $(this).siblings().next().removeClass('on');
+                $(this).children('i.fa-angle-down').toggleClass('act');
+            })
+        })
+    </script>
+</head>
+<body>
+    <header></header>
+    <main>
+        <section>
+            <form action="search.php" name="검색" method="post">
+                <fieldset>
+                    <legend>검색</legend>
+                    <div class="search_box">
+                    <button class="btn_submit"><i class="fas fa-search"></i></button>
+                    <input type="search" name="검색" id="search" placeholder="검색어를 입력해 주세요." >
+                    </div>
+                </fieldset>
+
+                <h2>자주하는 질문 TOP10</h2>
+                <dl class="faq">
+                    <dt>
+                        <span>1</span>
+                        반품 신청은 어떻게 하나요?
+                        <i class="fas fa-angle-down"></i>
+                    </dt>
+                    <dd>
+                        알아서 잘 하세요.
+                    </dd>
+
+                    <dt>
+                        <span>2</span>
+                        주문을 취소하고 싶어요.
+                        <i class="fas fa-angle-down"></i>
+                    </dt>
+                    <dd>
+                        안 됩니다.
+                    </dd>
+
+                    <dt>
+                        <span>3</span>
+                        리뷰는 어떻게 작성하나요?
+                        <i class="fas fa-angle-down"></i>
+                    </dt>
+                    <dd>
+                        최대한 길게
+                    </dd>
+
+                    <dt>
+                        <span>4</span>
+                        반품 시 별도 택배비가 부과되나요?
+                        <i class="fas fa-angle-down"></i>
+                    </dt>
+                    <dd>
+                        5,000만원
+                    </dd>
+
+                    <dt>
+                        <span>5</span>
+                        원하는 상품 방송시간을 문자로 받고 싶어요.
+                        <i class="fas fa-angle-down"></i>
+                    </dt>
+                    <dd>
+                        핑프신가요.
+                    </dd>
+
+                    <dt>
+                        <span>6</span>
+                        회원 탈퇴는 어떻게 하나요?
+                        <i class="fas fa-angle-down"></i>
+                    </dt>
+                    <dd>
+                        하지 마십쇼.
+                    </dd>
+
+                    <dt>
+                        <span>7</span>
+                        배송지를 변경할 수 있나요?
+                        <i class="fas fa-angle-down"></i>
+                    </dt>
+                    <dd>
+                        넹 우리 집으로
+                    </dd>
+
+                    <dt>
+                        <span>8</span>
+                        교환신청은 어떻게 하나요?
+                        <i class="fas fa-angle-down"></i>
+                    </dt>
+                    <dd>
+                        돈 주면 가능한.
+                    </dd>
+
+                    <dt>
+                        <span>9</span>
+                        CJ온스타일 앱(어플리케이션)은 어떻게 설치하나요?
+                        <i class="fas fa-angle-down"></i>
+                    </dt>
+                    <dd>
+                        SK스토아를 이용해주세요.
+                    </dd>
+
+                    <dt>
+                        <span>10</span>
+                        결제수단 변경하려면 주문취소하고 재주문하나요? 
+                        <i class="fas fa-angle-down"></i>
+                    </dt>
+                    <dd>
+                        Maybe
+                    </dd>
+
+                
+                </dl>
+
+            </form>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+</html>
