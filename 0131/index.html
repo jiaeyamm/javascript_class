@@ -22,7 +22,93 @@
             $('html, body').animate({scrollTop:$('section').eq(n).offset().top-60}, 500);
             return false;
        })
-    })
+
+       $(window).scroll(function() {
+              let spos = $(this).scrollTop();
+              console.log(spos);
+
+              /* 내가 한 것 
+            if(spos >=300 && spos <=900) {
+                $('.gnb > ul > li:nth-child(2) a').addClass('t_act');
+        } else if(spos >= 1100 && spos <= 1800) {
+            $('.gnb > ul > li:nth-child(3) a').addClass('t_act');
+        } else if(spos >= 1890 && spos <=2740) {
+            $('.gnb > ul > li:nth-child(4) a').addClass('t_act');
+        } else if(spos >= 2790 && spos <=3640) {
+            $('.gnb > ul > li:nth-child(5) a').addClass('t_act');
+        } else if(spos >= 3700 && spos <=4540) {
+            $('.gnb > ul > li:nth-child(6) a').addClass('t_act');
+        } else if(spos >=4590 && spos <=5440) {
+            $('.gnb > ul > li:last-child a').addClass('t_act');
+        } 
+        // 만약에 아래 해당하는 조건 범위에 맞는 a요소에 서식 
+        else {
+            $('.gnb > ul > li a').removeClass('t_act');
+        }
+*/
+        // 배럭좌가 한 것
+  /*       
+                if(spos >= 100 && spos <=900) {
+          $('.gnb li a').removeClass('t_act'); 
+          $('.gnb > ul > li:first-child a').addClass('t_act');
+        } else if(spos >= 1100 && spos <= 1800) {
+          $('.gnb li a').removeClass('t_act'); 
+          $('.gnb > ul > li:nth-child(2) a').addClass('t_act');
+        } else if(spos >= 1890 && spos <=2740) {
+          $('.gnb li a').removeClass('t_act'); 
+          $('.gnb > ul > li:nth-child(3) a').addClass('t_act');
+        } else if(spos >= 2790 && spos <=3640) {
+          $('.gnb li a').removeClass('t_act'); 
+          $('.gnb > ul > li:nth-child(4) a').addClass('t_act');
+        } else if(spos >= 3690 && spos <=4540) {
+          $('.gnb li a').removeClass('t_act'); 
+          $('.gnb > ul > li:nth-child(5) a').addClass('t_act');
+        } else if(spos >= 4590 && spos <=5390) {
+          $('.gnb li a').removeClass('t_act'); 
+          $('.gnb > ul > li:nth-child(6) a').addClass('t_act');
+        } else if(spos >= 5440) {
+          $('.gnb li a').removeClass('t_act'); 
+          $('.gnb > ul > li:nth-child(7) a').addClass('t_act');
+        }
+
+
+                if(spos <=900) {
+          $('.gnb li a').removeClass('t_act'); 
+          $('.gnb > ul > li:first-child a').addClass('t_act');
+        } else if(spos <= 1800) {
+          $('.gnb li a').removeClass('t_act'); 
+          $('.gnb > ul > li:nth-child(2) a').addClass('t_act');
+        } else if(spos <=2700) {
+          $('.gnb li a').removeClass('t_act'); 
+          $('.gnb > ul > li:nth-child(3) a').addClass('t_act');
+        } else if(spos <=3600) {
+          $('.gnb li a').removeClass('t_act'); 
+          $('.gnb > ul > li:nth-child(4) a').addClass('t_act');
+        } else if(spos <=4490) {
+          $('.gnb li a').removeClass('t_act'); 
+          $('.gnb > ul > li:nth-child(5) a').addClass('t_act');
+        } else if(spos <=5390) {
+          $('.gnb li a').removeClass('t_act'); 
+          $('.gnb > ul > li:nth-child(6) a').addClass('t_act');
+        } else {
+          $('.gnb li a').removeClass('t_act'); 
+          $('.gnb > ul > li:nth-child(7) a').addClass('t_act');
+        }
+
+*/arguments 
+        
+// offset 메서드로 각각 해당하는 박스의 위치값에 따른 서식적용하기
+        $('main section').each(function(i) {
+            let top = $(this).offset().top-100;
+            if(spos >= top) { // 만약에 spos의 값이 top보다 크면 
+                $('.gnb li a').removeClass('t_act'); // 기존 서식을 제거 
+                $('.gnb li').eq(i).find('a').addClass('t_act'); // 해당메뉴에 서식 적용된다
+            }
+        })
+    }) 
+        });   
+        
+
 </script>
 </head>
 <body>
@@ -33,7 +119,7 @@
         <nav class="gnb">
             <ul>
                 <li>
-                    <a href="#" title="home">home</a>
+                    <a href="#" title="home" class="t_act">home</a>
                 </li>
                 <li>
                     <a href="#" title="features">features</a>
@@ -88,7 +174,7 @@
     </main>
 
     <footer>
-        <address>copyright&copy; 2020 000 allrights reserved.</address>
+        <address>copyright&copy; 2020 000 allrights reserved!</address>
     </footer>
 </body>
 </html>
