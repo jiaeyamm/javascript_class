@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습예제 제주도</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        ul, li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        article {
+            position: relative;
+            margin-top: 50px;
+            display: flex;
+            width: 1010px;
+            height: 740px;
+            border: 3px solid  #F06D01;
+            margin: 0px auto;
+        }
+
+        .tab_menu {
+            width: 100%;
+            display: flex;
+            align-items:flex-start;
+        }
+
+        .tab_menu li  {
+            width: 20%;
+            text-align: center;
+            height: 120px;
+        }
+
+
+        .tab_menu li a {
+            display: block;
+            line-height: 55px;
+            margin: 0px auto;
+            padding-top: 10px;
+            font-weight: bold;
+        }
+
+        .tab_menu li a > img {
+            width: 75px;
+            height: 73.5px;
+            display: block;
+            margin: 0px auto;
+        }
+
+
+        .con {
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+        }
+
+        .con img {
+            display: block;
+            height: 605px;
+            width: 100%;
+        }
+
+        div:not(.c01) {
+            display: none;
+        }
+
+        .on {
+            background-color: #F06D01;
+            color: #fff;
+        }
+
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- 제이쿼리 라이브러리  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- jQuery UI 라이브러리 -->
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+        $(function() {
+
+            // 1. 변수 선언
+            let tabMenu = $('.tab_menu li a');
+    
+
+            tabMenu.click(function() {
+
+               tabMenu.each(function() {
+                    let imgUrl = $(this).find('img').attr('src');
+                    console.log(imgUrl);
+                    let replaceUrl = imgUrl.replace('_on' ,'_off');
+                    console.log(replaceUrl);
+                    $(this).find('> img').attr('src', replaceUrl)
+                })
+
+                $('.tab_menu li a div').hide();
+                $(this).find('div').show();
+                $(this).addClass('on').parents().siblings().find('a').removeClass('on');
+
+                let on = $(this).find('>img').attr('src');
+                on = on.replace('_off', '_on');
+
+                $(this).find('> img').attr('src', on);
+
+                return false;
+/*
+                $('.tab_menu li a div').hide();
+                $(this).find('div').show();
+                $(this).addClass('on').parents().siblings().find('a').removeClass('on');
+
+                
+                let imgUrl = $(this).find('img').attr('src');
+                let replaceUrl = imgUrl.replace('_on' ,'_off');
+
+
+    /*            return false; 
+                $('.tab_menu li a div').hide();
+                $(this).find('div').show();
+                $(this).addClass('on').parents().siblings().find('a').removeClass('on');
+
+                let src = $(this).find('img').attr('src');
+                
+                src = src.replace('_on', '_off');
+                let n = $(this).index();
+
+                $('.tabMenu li').each(function(i) {
+                    $(this).find('img').attr('src', $(this).find('img').attr('src').replace('_off', '_on'));
+
+                    if (n!=i) {
+                        $(this).find('img').attr('src', $(this).find('img').attr('sr').replace('_on', '_off'));
+                    }
+                })
+                return false;
+            */
+            });
+
+
+            
+
+        })
+    </script>
+</head>
+<body>
+    <header></header>
+    <main>
+        <article>
+            <ul class="tab_menu">
+                <li>
+                    <a href="./img/ico_theme_zone_1_on.png" class="on">
+                        <img src="./img/ico_theme_zone_1_on.png" alt="테마여행" class="tabimg">
+                        테마여행
+                        <div class="con c01">
+                           <img src="./img/01.jpg" alt="테마여행">
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="./img/ico_theme_zone_2_on.png">
+                        <img src="./img/ico_theme_zone_2_off.png" alt="테마여행" class="tabimg">
+                        추천일정
+                        <div class="con c02">
+                           <img src="./img/02.jpg" alt="추천일정">
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="./img/ico_theme_zone_3_on.png">
+                        <img src="./img/ico_theme_zone_3_off.png" alt="테마여행" class="tabimg">
+                        스크린속 제주
+                        <div class="con c03">
+                           <img src="./img/03.jpg" alt="추천일정">
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="./img/ico_theme_zone_4_on.png">
+                        <img src="./img/ico_theme_zone_4_off.png" alt="교통정보" class="tabimg">
+                        교통정보
+                        <div class="con c04">
+                           <img src="./img/04.jpg" alt="교통정보">
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="./img/ico_theme_zone_5_on.png">
+                        <img src="./img/ico_theme_zone_5_off.png" alt="안전&middot;안심관광 가이드" class="tabimg">
+                        안전&middot;안심관광 가이드
+                        <div class="con c05">
+                           <img src="./img/04.jpg" alt="테마여행">
+                        </div>
+                    </a>
+                </li>
+
+            </ul>
+        </article>
+    </main>
+    <footer></footer>
+</body>
+</html>
