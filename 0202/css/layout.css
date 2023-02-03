@@ -5,20 +5,88 @@ a {
     color: #333;
 }
 
-nav {
+/* 헤더 서식 */
+
+header {
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 10000;
+}
+
+header > h1 {
+    padding: 24px 0px 0px 2%;
+}
+
+header i.fas {
+    position: absolute;
+    top: 24px;
+    font-size: 1.6rem;
+    color: var(--t-color02);
+    cursor: pointer;
+}
+
+
+header i.fa-user {
+    right: 4%;
+    
+}
+
+header i.fa-bell {
+    right: 2%;
+}
+
+
+header nav {
+    width: 600px;
+    margin: -24px auto 0px auto;
+}
+
+header .gnb {
+    display: flex;
+    justify-content: space-around;
+}
+
+header .gnb > li > a {
+    font-size: 1.2rem;
+    color: var(--t-color02);
+}
+
+/* 화면이 스크롤되면 적용되는 서식 */
+
+
+/* nav a 에 적용되는 서식, 알람, 로그인 아이콘에 적용되는 서식*/
+.on {
+    color: var(--t-color01) !important;
+}
+
+/* header 배경 */
+.h_on {
+    background: rgba(255, 255, 255, .9) !important;
+}
+/* 메인 내비게이션 */
+
+
+
+
+
+#m_nav {
     position: fixed;
     right: 10px;
     top: 50%;
     transform: translateY(-50%);
+    z-index: 999999;
 }
 
-nav > ul {
+#m_nav > ul {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
 }
 
-nav > ul li {
+#m_nav > ul li {
     padding: 20px 0px;
     overflow: hidden;
     height: 36px;
@@ -28,8 +96,8 @@ nav > ul li {
     position: relative;
 }
 
-nav > ul li a {
-    padding: 10px 0px;
+#m_nav > ul li a {
+    padding: 12px 0px;
     left: 0px;
     width: 200px;
     color: #fff;
@@ -40,23 +108,23 @@ nav > ul li a {
     display: none;
 }
 
-nav > ul li:hover {
+#m_nav > ul li:hover {
     width: 200px;
 }
 
-nav > ul li:hover a {
+#m_nav > ul li:hover a {
     display: block;
 }
 
-nav > ul li:hover span {
-    background-color: cornflowerblue;
+#m_nav > ul li:hover span {
+    background-color: #212772;
 }
 
-nav > ul li span {
+#m_nav > ul li span {
     z-index: 1;
     width: 36px;
     height: 36px;
-    background-color: dodgerblue;
+    background-color: #006eff;
     text-align: center;
     line-height: 36px;
     border-radius: 50%;
