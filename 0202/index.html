@@ -20,9 +20,11 @@
 <!-- css 추가속성 시 접두사 자동으로 붙여주는 스크립트 -->
 <script src="./script/prefixfree.min.js"></script>
 <!-- 공통 -->
-<script src="./script/layout.js"></script>
+<script src="./script/layout.js" defer></script>
 <!-- 콘텐츠 스크립트 -->
-<script src="./script/main.js"></script>
+<script src="./script/main.js" defer></script>
+<!-- 쿠키 -->
+<script src="./script/jquery.cookie.js"></script>
 
 <!-- 스와이퍼 -->
 <link rel="stylesheet" href="./css/swiper.css">
@@ -151,7 +153,7 @@ https://cdn.jsdelivr.net/npm/swiper@9.0.1/swiper-bundle.min.css
                     <div class="swiper-slide">
                       <ul>
                         <li>
-                          <span class="rank">1위</span>
+                          <span class="rank">2위</span>
                           <h4>가솔린 1.0 터보 인스퍼레이션</h4>
                           <p><img src="./images/color_blue.3c888d7.png" alt="가솔린 1.0 터보 인스퍼레이션"></p>
                           <ul>
@@ -186,7 +188,7 @@ https://cdn.jsdelivr.net/npm/swiper@9.0.1/swiper-bundle.min.css
                   <div class="swiper-slide">
                     <ul>
                       <li>
-                        <span class="rank">1위</span>
+                        <span class="rank">3위</span>
                         <h4>가솔린 1.0 터보 인스퍼레이션</h4>
                         <p><img src="./images/color_orange.0c6edb3.png" alt="가솔린 1.0 터보 인스퍼레이션"></p>
                         <ul>
@@ -249,23 +251,75 @@ https://cdn.jsdelivr.net/npm/swiper@9.0.1/swiper-bundle.min.css
           </section>
 
         <section id="intro">
-            <h2>소개</h2>
+            <h2 class="m_title">소개</h2>
+            <video src="./images/highlight_intro.mp4" muted autoplay loop="infinite"></video>
+            <p class="left_title">강인하고 <br> 아이코닉한 SUV</p>
+            <p class="right_title">젊고 역동적인<br>감성의<br>SUV디자인</p>
+
+            <a href="intro.html" class="more_btn" title="더보기">더보기</a>
         </section>
         
         <section id="test">
-            <h2>시승신청</h2>
+            <h2 class="m_title">시승신청</h2>
+            <p class="p01">캐스퍼가 제공하는 편리한 시승 서비스를 이용해보세요.</p>
+
+            <article class="t_drive_l">
+              <h3>현대자동차 드라이빙라운지 <br> / CASPER STUDIO 시승</h3>
+              <p class="t_drive_p1">드라이버 라운지 CASPER STUDIO에서<br> 캐스퍼를 체험해보세요.</p>
+
+              <a href="#" title="시승 신청하기" class="test_d_btn">시승 신청하기</a>
+              <br>
+              <a href="test_drive.html" title="시승 신청 조회" class="test_d_btn01">시승 신청 조회</a>
+
+              <p class="t_drive_p2">&middot;시승 신청은 만 21세 이상 운전면허 소지자면 누구나 이용 가능합니다.</p>
+            </article>
+            <article class="t_drive_r">
+              <h3>쏘카<br> 카셰어링 시승</h3>
+              <p class="t_drive_p1">24시간 언제나 내 근처에서 편리하게<br> 캐스러플 체험하실 수 있습니다.</p>
+              <a href="test_drive.html" title="시승 신청하기" class="test_d_btn">시승 신청하기</a>
+              <p class="t_drive_p2 under">&middot; 쏘카는 만 21세 이상, 운전면허 취득 1년 이상 시 이용할 수 있습니다.</p>
+            </article>
         </section>
         
         <section id="event">
-            <h2>이벤트&프로모션</h2>
+            <h2 class="m_title">이벤트&프로모션</h2>
+            <p class="p01">다양한 이벤트 &#x0026; 프로모션과 함께 캐스퍼를 만나보세요.</p>
+
+            <article>
+              <ul class="slide" id="slide">
+                <li>
+                  <a href="#" title="슬라이드 1">
+                    <img src="./images/PC_main_banner_car_insurance.jpg" alt="">
+                  </a>
+                </li>
+                <li>
+                  <a href="#" title="슬라이드 2">
+                    <img src="./images/PC_Main_HGenuineAccessories.jpg" alt="">
+                  </a>
+                </li>
+                <li>
+                  <a href="#" title="슬라이드 3">
+                    <img src="./images/pc_mainEventBanner.jpg" alt="">
+                  </a>
+                </li>
+                <li>
+                  <a href="#" title="슬라이드 4">
+                    <img src="./images/pc_mainEventBanner.jpg" alt="">
+                  </a>
+                </li>
+              </ul>
+
+              <i class="fas fa-angle-left"></i>
+              <i class="fas fa-angle-right"></i>
+            </article>
         </section>
         
         <section id="buy">
-            <h2>캐스퍼 구매 안내</h2>
+            <h2 class="m_title">캐스퍼 구매 안내</h2>
         </section>
         
         <section id="cs">
-            <h2>고객지원</h2>
+            <h2 class="m_title">고객지원</h2>
         </section>
     </main>
     <footer></footer>

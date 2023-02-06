@@ -71,3 +71,41 @@ $(function() {
     })
 
 })
+
+
+
+// 1. 변수를 몇개 선언해야 할지 생각
+
+const slide = document.querySelector('.slide');
+const slide_img = document.querySelectorAll('.slide li');
+
+const img_n = slide_img.length; // 목록의 갯수
+
+console.log(img_n); // 5
+
+const img_w = 100;
+const s_con = 1;
+
+let count = 0;
+
+
+
+
+function mslide(n) {
+    slide.style.marginLeft = img_w *- n + '%';
+    count = n;
+    console.log(slide.style.marginleft); // -330, -660, 0
+    console.log(count);
+}
+
+
+let timer = setInterval(function() {
+    if (count < img_n-s_con) {
+        mslide(count+1); 
+    } else {
+        mslide(0);
+    }
+}, 5000);
+
+// 마우스를 양쪽 버튼에서 빼면 다시 시간을 생성하여 자동으로 움직이게 한다.
+
