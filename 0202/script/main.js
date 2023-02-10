@@ -29,7 +29,6 @@ function closeModal() {
     if(ch.is(':checked')) {
         $.cookie('popup', 'none', {expires:7, path:'/'});
     }
-
     $('.modal').hide();
 }
 

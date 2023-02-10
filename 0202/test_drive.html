@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/main.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+<!-- 제이쿼리 라이브러리  -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- jQuery UI 라이브러리 -->
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+<!-- css 추가속성 시 접두사 자동으로 붙여주는 스크립트 -->
+<script src="./script/prefixfree.min.js"></script>
+<!-- 공통 -->
+
+<style>
+    header{ background:#000; }
+    main{padding:140px 0px 50px 0px;}
+    fieldset{
+      width:700px;
+      margin:0px auto;
+    }
+    fieldset > legend{
+      font-weight:bold;
+      text-align:center;
+      font-size:28px;padding-bottom:60px;
+    }
+    input[type="text"], input[type='email'], input[type='date']{
+      width:300px;height:30px;
+    }
+    fieldset p{line-height:50px;}
+    fieldset label{
+      font-size:18px;
+      display:inline-block;
+      width:100px;
+    }
+    fieldset p:nth-of-type(3) {
+        font-size: 18px;
+    }
+
+</style>
+</head>
+<body>
+    <header>
+        <h1>
+            <a href="index.html">
+                <img src="./images/logo-casper-white.028f418.png" alt="상단 로고">
+            </a>
+        </h1>   
+        
+        <nav>
+            <ul class="gnb">
+                <li>
+                    <a href="#" title="소개">소개</a>
+                </li>
+                <li>
+                    <a href="#" title="체험">체험</a>
+                </li>
+                <li>
+                    <a href="#" title="이벤트">이벤트</a>
+                </li>
+                <li>
+                    <a href="#" title="구매안내">구매안내</a>
+                </li>
+                <li>
+                    <a href="#" title="고객지원">고객지원</a>
+                </li>
+            </ul>
+        </nav>
+
+        
+        <i class="fas fa-user"></i>
+        <i class="fas fa-bell"></i>
+    </header>
+        <nav id="m_nav">
+            <ul>
+                <li>
+                    <span>1</span>
+                    <a href="#" title="소개">소개</a>
+                </li>
+                <li>
+                    <span>2</span>
+                    <a href="#" title="체험">체험</a>
+                </li>
+                <li>
+                    <span>3</span>
+                    <a href="#" title="이벤트">이벤트</a>
+                </li>
+                <li>
+                    <span>4</span>
+                    <a href="#" title="구매">구매</a>
+                </li>
+                <li>
+                    <span>5</span>
+                    <a href="#" title="고객지원">고객지원</a>
+                </li>
+            </ul>
+        </nav>
+    
+        <main>
+    <form name="시승신청" method="post" action="db_insert.php">
+      <fieldset>
+        <legend>시승신청 온라인 예약</legend>
+        <p><label>고객명 : </label><input type="text"></p>
+        <p><label>휴대폰 : </label><input type="text"></p>
+        <p><span>sms수신여부 : </span>
+        <label for="s01">수신</label><input type="radio" name="sms" id="s01">
+        <label for="s02">수신안함</label><input type="radio" name="sms" id="s02"></p>
+
+        <p><label>이메일 주소</label><input type="email"></p>
+        <p><label for="region">전시장 선택 : </label>
+            <select name="region" id="region">
+              <option value="">전시장선택</option>
+              <option value="드라이빙라운지 목동">드라이빙라운지 목동</option>
+              <option value="드라이빙라운지 성수">드라이빙라운지 성수</option>
+              <option value="드라이빙라운지 미아">드라이빙라운지 미아</option>
+              <option value="드라이빙라운지 용산">드라이빙라운지 용산</option>
+              <option value="드라이빙라운지 강남">드라이빙라운지 강남</option>
+            </select>
+          </p>
+          <p><label for="car">차량 선택 : </label>
+            <select name="car" id="car">
+              <option value="">차량선택</option>
+              <option value="아이오닉6">아이오닉6</option>
+              <option value="아이오닉5">아이오닉5</option>
+              <option value="넥쏘">넥쏘</option>
+              <option value="아반떼">아반떼</option>
+            <option value="쏘나타">쏘나타</option>
+        </select>
+          </p>
+        <p><label>보유차종 : </label><input type="text"></p>
+        <p><label>시승희망일 : </label><input type="date"></p>
+        <p>
+          <input type="submit" value="예약하기">
+          <input type="reset" value="취소하기">
+        </p>
+      </fieldset>
+    </form>
+  </main>
+
+
+        <footer>
+            <section>
+              <h2>
+                <img src="./images/logo-hyundai.a9ebdc6.png" alt="현대자동차 로고">
+              </h2>
+      
+            
+              <article class="wrap">
+                <ul class="f_lnb">
+                  <li>
+                    <a href="#" title="이용약관">이용약관</a>
+                  </li>
+                  <li>
+                    <a href="#" title="개인정보 처리방침" class="color">개인정보 처리방침</a>
+                  </li>
+                  <li>
+                    <a href="#" title="저작권안내">저작권안내</a>
+                  </li>
+                  <li>
+                    <a href="#" title="공동인증서 안내"">공동인증서 안내</a>
+                  </li>
+                  <li>
+                    <a href="#" title="현대자동차 홈페이지">현대자동차 홈페이지</a>
+                  </li>
+                </ul>
+                
+                <ul class="c_info">
+                  <li>사업자등록번호 : 101-81-09147</li>
+                  <li>통신판매업신고번호 : 2002-01546</li>
+                  <li>대표이사 : 장재훈 
+                    <a href="#" title="사업자정보확인">사업자정보확인 ></a>
+                  </li>
+                  <li>캐스퍼 고객센터 : 080-500-6000</li>
+                  <li>주소 : 서울시 서초구 헌릉로12</li>
+                  <li>호스팅서비스 제공 : 현대오토에버(주)</li>
+                </ul>
+                <address>COPYRIGHT &copy; HYUNDAI MOTOR COMPANY, ALL RIGHTS RESERVED. </address>
+              </article>
+            </section>
+          </footer>
+</body>
+</html>
