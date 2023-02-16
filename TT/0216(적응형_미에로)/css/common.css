@@ -8,73 +8,52 @@ header{
   z-index:1000;
 }
 header > h1{
-  position:absolute;top:20px;
+  position:absolute;top:40px;
   left:3%;
-  width:200px;
+  width:300px;
 }
 header > h1 img{width:100%;}
-.toggle{
-  /* background:#fdb227; */
-  width:40px;height:36px;
-  position:absolute;
-  right:4%;top:20px;
-  padding:7px 5px 0px; 
-}
-.toggle > span{
-  display:inline-block;
-  background-color:#ffffff;
-  width:40px;height:4px;
-  transition:0.3s;
-}
-/* 토글버튼에 들어갈 서식 */
-.act01{
-  transform:rotate(45deg);
-  background:#fff !important;
-  position:absolute;top:19px;left:5px;
-}
-.act02{
-  display:none !important;
-}
-.act03{
-  transform:rotate(-45deg);
-  background:#fff !important;
-  position:absolute;top:19px;left:5px;
-}
 
 .gnb{
-  width:94%;
   position:absolute;
-  top:80px;right:3%;
-  background:#fff;
-  display:none;
+  top:60px;right:3%;
 }
 .gnb > ul{
-  /* display:flex; */
-  /* justify-content: flex-end;
-  align-items: end; */
+  display:flex;
+  justify-content: flex-end;
+  align-items: end;
 }
 .gnb > ul > li{
   margin:0px 20px;
   position:relative;/*sub의 기준*/
   line-height:40px;
-  text-align:center;
 }
 .gnb > ul > li > a{
-  color:var(--f-color01);
+  color:var(--f-color02);
   font-size:var(--f-size02);
-  display:block;
-  line-height:50px;
 }
 .gnb i.fa-angle-down{
   transform:translateX(3px);
 }
+.gnb li:first-child .sub{
+  width:150px;left:-45px;
+}
+.gnb li:nth-child(2) .sub{
+  width:200px;left:-68px;
+}
+.gnb li:nth-child(4) .sub{
+  width:120px;
+}
 /* 서브메뉴서식 */
 .sub{ 
+  width:100%;
+  position:absolute;
+  background:#fff;
   padding:2px;
+  border-radius:4px;
+  border:1px solid #ccc;
+	box-shadow: 0px 1px 1px #ccc;
   display:none;
-  text-align:center;
-  background:#ececec;
-  border-bottom:1px solid #ccc;
 }
 .sub > li{ text-align:center;}
 .sub > li > a{
@@ -88,11 +67,10 @@ header > h1 img{width:100%;}
   background:var(--bg-color01);
   color:var(--f-color02);
 }
-.a_on{transform:rotate(180deg) !important;}
+
 
 /* 푸터영역서식 */
 footer{
-  display:none;
   width:100%;
   background:var(--bg-color02);
   color:#fff;
