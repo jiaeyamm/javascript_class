@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 json 데이터 출력하기</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <script>
+        $(function(){
+            $.getJSON('./data/test_drive.json', function(data){
+                     let html = '<table>';
+                     '<caption>시승신청 예약</caption>';
+                     '<th>번호</th><th>이름</th><th>연락처</th><th>이메일</th><th>시승지점</th><th>시승차량</th><th>보유차량</th><th>날짜</th>';
+
+
+                for(key in data) {
+                    
+                    html += `<tr>`;
+                    for(let i in data[key]) {
+
+                        html+=`<td>${data[key][i]}</td>`;
+                    }
+
+                        html+=`</tr>`
+                    }
+
+
+                    html+=`<table>`;
+                    
+                    }
+                    
+        
+                
+            )
+
+        })
+    </script>
+</head>
+<body>
+    <h2>자바스크립트 json 데이터 출력하기</h2>
+    <p>닷홈 SQL 데이터 베이스에 저장된 'test_drive' 테이블 자료를 'json'파일로 저장하면 자바스크립트로 출력해보기</p>
+
+    <table>
+        <tr>
+            <th>이름</th>
+            <th>지역</th>
+            <th>날짜</th>
+            <tr>
+            <td>이름</td>
+            <td>지역</td>
+            <td>날자</td>    
+            </tr>
+        </tr>
+    </table>
+</body>
+</html>

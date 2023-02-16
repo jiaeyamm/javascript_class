@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>라면 정보 데이터 출력</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <script src="./css/bootstrap.js"></script>
+    <script>
+        $(function() {
+
+            $.getJSON('./data/noodle.json', function(data) {
+                
+                let noodle = `
+                    <table class="table table-striped">
+                    <caption>라면정보 데이터 출력</caption>
+                    <thead class="table-dark">
+                    <tr>
+                        <th>번호</th>
+                        <th>제품명</th>
+                        <th>회사명</th>
+                        <th>용기구분</th>
+                        <th>가격</th>
+                        <th>생산일자</th>   
+                    </tr>
+                    </thead>
+                    <tbody>
+                `;
+            
+                for(key in data) {
+                    noodle += `<tr>`;
+                        if(data[key].kind=='M') {
+                            data[key].kind='일반라면';
+                        } else {
+                            data[key].kind='용기라면';
+                        }
+                    for(let i in data[key]) {
+                        noodle += `<td>${data[key][i]}</td>`;
+                    }        
+                    noodle += `</tr>`;
+
+                }
+                noodle += `</tbody></table>`;
+                $('#noodle_box').html(noodle);
+            });
+
+        })
+    </script>
+    <style>
+        table {
+            width: 1000px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>라면 정보 json 데이터 배열로 출력하기</h2>
+    <p>SQL데이터 테이블 noodle 에서 json 데이터를 내려받아 자바스크립트 배열 객체를 활용하여 데이터를 출력한다.</p>
+    <p>출력데이터는 테이블 방식으로 출력을 하고 부트스트랩의 클래스 서식을 적용하여 꾸민다.</p>
+    
+
+    <article id="noodle_box"> 
+
+    </article>
+</body>
+</html>

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>넷플릭스</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/reset.css" type="text/css">
+    <link rel="stylesheet" href="./css/base.css" type="text/css">
+    <link rel="stylesheet" href="./css/common.css" type="text/css">
+    <link rel="stylesheet" href="./css/main.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+
+<!-- 제이쿼리 라이브러리  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- jQuery UI 라이브러리 -->
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+        <!-- Script -->
+        <script src="./script/prefixfree.min.js"></script>
+        <script src="./script/common.js" defer></script>
+        <script src="./script/main.js" defer></script>
+        <script>
+            // 배열 객체를 사용하여 스마트폰의 종류값을 넣어준다.
+            let mobile = ['Android', 'iPhone', 'iPad', 'SAMSUNG', 'BlackBerry', 'Window CE', 'MOT', 'SonyEricsson', 'Nokia'];
+        
+            if(document.URL.match('move_pc_screen') != null) mobile = null;
+            // 만약에 위 배열 값 개수 만큼 반복하여 사용자가 접속한 스마트폰의 종류를 체크하여 맞다면 아래 내용을 실행한다.
+
+            for(let i in mobile) {
+                if(navigator.userAgent.match(mobile[i]) != null) {
+                    location.href='http://jiaeyamm33.dothome.co.kr/html5/PP/mmindex.html';
+                    break;
+                }
+            }
+        </script>
+</head>
+<body>
+    <header class="flex">
+        <h1>
+            <a href="index.html" title="메인페이지로 바로가기">
+                <img src="./image/logo.png" alt="상단 로고">
+            </a>
+        </h1>
+
+        <nav>
+            <ul class="gnb flex">
+                <li><a href="#" title="Global Top 10">Global Top 10</a></li>
+                <li><a href="#" title="신작">신작  <i class="fas fa-angle-down"></i></a>
+                    <ul class="sub">
+                        <li><a href="#" title="신작 영화">영화</a></li>
+                        <li><a href="#" title="신작 드라마">드라마</a></li>
+                        <li><a href="#" title="신작 다큐멘터리">다큐멘터리</a></li>
+                        <li><a href="#" title="신작 애니메이션">애니메이션</a></li>
+                        <li><a href="#" title="신작 예능">예능</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" title="컨텐츠">컨텐츠  <i class="fas fa-angle-down"></i></a>
+                    <ul class="sub">
+                        <li><a href="#" title="영화">영화</a></li>
+                        <li><a href="#" title="드라마">드라마</a></li>
+                        <li><a href="#" title="다큐멘터리">다큐멘터리</a></li>
+                        <li><a href="#" title="애니메이션">애니메이션</a></li>
+                        <li><a href="#" title="신작 예능">예능</a></li>
+                        <li><a href="#" title="오직 넷플릭스에서">오직 넷플릭스에서</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" title="뉴스룸">뉴스룸  <i class="fas fa-angle-down"></i></a>
+                    <ul class="sub">
+                        <li><a href="#" title="공개 일정">공개 일정</a></li>
+                        <li><a href="#" title="제작 확정">제작 확정</a></li>
+                        <li><a href="#" title="넷플릭스 뉴스">넷플릭스 뉴스</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" title="이벤트">이벤트  <i class="fas fa-angle-down"></i></a>
+                    <ul class="sub">
+                        <li><a href="#" title="진행 중인 이벤트">진행 중인 이벤트</a></li>
+                        <li><a href="#" title="종료 이벤트">종료 이벤트</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" title="About Netflix">About Netflix  <i class="fas fa-angle-down"></i></a>
+                    <ul class="sub">
+                        <li><a href="#" title="진행 중인 이벤트">Netflix 브랜드 스토리</a></li>
+                        <li><a href="#" title="Global Netflix">Global Netflix</a></li>
+                        <li><a href="#" title="Netflix 채용">Netflix 채용</a></li>
+                        <li><a href="#" title="Netflix 투자 문의">Netflix 투자 문의</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="visual_slide">
+            <div class="box">
+            <h2>Gloabl Top 10</h2>
+            </div>
+            <div class="slide_wrap flex">
+                <div class="slide_img slideZ">
+                    <img src="./image/top10_1.jpg" alt="top1 일타스캔들">
+                </div>
+                <div class="slide_img">
+                    <img src="./image/top_10_2.jpg" alt="top2 피지컬100">
+                </div>
+                <div class="slide_img">
+                    <img src="./image/top_10_3.jpg" alt="top3 사랑의 이해">
+                </div>
+                <div class="slide_img">
+                    <img src="./image/top_10_4.jpg" alt="top4 낮과밤">
+                </div>
+                <div class="slide_img">
+                    <img src="./image/top_10_5.jpg" alt="top5 더글로리">
+                </div>
+                <div class="slide_img">
+                    <img src="./image/top_10_6.jpg" alt="top6 빨간풍선">
+                </div>
+                <div class="slide_img">
+                    <img src="./image/top_10_7.jpg" alt="top7 나는 솔로">
+                </div>
+                <div class="slide_img">
+                    <img src="./image/top_10_8.jpg" alt="top8 미스터 션샤인">
+                </div>
+                <div class="slide_img">
+                    <img src="./image/top_10_9.jpg" alt="top9 재벌집 막내아들">
+                </div>
+                <div class="slide_img">
+                    <img src="./image/top_10_10.jpg" alt="top10 트롤리">
+                </div>
+
+                <ul class="slide_btn">
+                    <li><img src="./image/left-arrow.png" alt="왼쪽 슬라이드로 이동"></li>
+                    <li><img src="./image/right-arrow.png" alt="오른쪽 슬라이드로 이동"></li>
+                </ul>
+            </div>
+
+            <ul class="slide_tab">
+                <li class="on">&nbsp;</li>
+                <li>&nbsp;</li>
+                <li>&nbsp;</li>
+                <li>&nbsp;</li>
+                <li>&nbsp;</li>
+                <li>&nbsp;</li>
+                <li>&nbsp;</li>
+                <li>&nbsp;</li>
+                <li>&nbsp;</li>
+                <li>&nbsp;</li>
+            </ul>
+        </section>
+        <section id="new">
+            <div class="s_title">
+            <h2>3월의 신작</h2>
+            </div>
+            <article class="trailer">
+            <nav>
+                <ul class="new_tap flex">
+                    <li>
+                        <a href="#" title="더 글로리 Part.2" 
+                        data-="" class="on">
+                        더 글로리 Part.2
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="Luther : Fallen " 
+                        data-="">
+                        Luther : Fallen
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="길복순" 
+                        data-="">
+                        길복순
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="Murder Mystery2" 
+                        data-="">
+                        Murder Mystery2
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="new_intro the_glory flex">
+            <div class="i_box">
+            <h3 class="new_title">Trailer</h3>
+            <iframe src="https://www.youtube.com/embed/fk8vvmHIWAA" title="더 글로리 Part.2 예고편" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <span>19+</span>
+            </div>
+            <div class="p_box">
+            <h3>더 글로리 Part.2</h3>
+            <p><span class="bold">출연</span> 송혜교, 임지연, 이도현, 정성일 <span class="bold">연출</span> 김은숙 <span class="bold">감독</span> 안길호 </p>
+            <p>고등학교 동급생들의 지독한 괴롭힘, 하지만 도움을 청할 곳은 그 어디에도 없다.<br>그렇게 절망의 늪에 빠진 문동은이 어느 날 새로운 삶의 목표를 발견한다.<br>가해자들에게 바치는 처절하고 치밀한 복수극, 준비는 끝났다.<br>본격적으로 그들에게 복수할 시간이다.</p>
+             <p>드라마 <span class="bold">장르</span> 범죄, 스릴러, 추리 </p>    
+            </div>
+            </div>   
+            </div>
+            </article>
+            
+        </section>
+        <section id="contents">
+            <h2>컨텐츠</h2> 
+            </div>
+            <h3>영화</h3>
+            <div class="contents_list">
+                <ul class="flex">
+                    <li>
+                        <a href="#" title="반디젤의 뭐시긴">
+                            <img src="./image/movie01.jpg" alt="영화 연애대전">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="영화 메이크 마이 데이">
+                            <img src="./image/movie02.jpg" alt="영화 메이크 마이 데이">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="영화 클래스">
+                            <img src="./image/movie03.jpg" alt="영화 클래스">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="영화 트루 스피릿">
+                            <img src="./image/movie04.jpg" alt="영화 트루 스피릿">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="영화 유어 플레이스 오어 마인">
+                            <img src="./image/movie05.jpg" alt="영화 유어 플레이스 오어 마인">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <a href="#" class="more">더 보러가기</a>
+            <h3>드라마</h3>
+            <div class="contents_list">
+                <ul class="flex">
+                    <li>
+                        <a href="#" title="드라마 너의 모든 것">
+                            <img src="./image/drama01.jpg" alt="드라마 너의 모든 것">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./image/drama02.jpg" alt="드라마 익스체인지">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./image/drama03.jpg" alt="드라마 스퀘어드 러브">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./image/drama04.jpg" alt="드라마 업쇼패밀리">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./image/drama05.jpg" alt="드라마 인피에스토">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <a href="#" class="more">더 보러가기</a>
+            <h3>다큐멘터리</h3>
+            <div class="contents_list">
+                <ul class="flex">
+                    <li>
+                        <a href="">
+                            <img src="./image/docu01.jpg" alt="다큐멘터리 본능의 질주">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./image/docu02.jpg" alt="다큐멘터리 미남부 스캔들">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./image/docu03.jpg" alt="다큐멘터리 군터 밀리어네어도그">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./image/docu04.jpg" alt="다큐멘터리 아우터 뱅크스">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./image/docu05.jpg" alt="다큐멘터리 더 로맨틱스">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <a href="#" class="more">더 보러가기</a>
+        </section>
+        <section id="newsroom">
+            <h2>NEWSROOM</h2>
+            <ul class="news_list">
+                <li>
+                    <div class="news_box">
+                        <img src="./image/newroom_01.jpg" alt="<살인자ㅇ난감>제작 확정">
+                        <h4><살인자o난감>제작 확정</h4>
+                        <div></div>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img src="" alt="">
+                        <h4></h4>
+                        <div></div>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img src="" alt="">
+                        <h4></h4>
+                        <div></div>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img src="" alt="">
+                        <h4></h4>
+                        <div></div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section id="event">
+            <h2>Event</h2>
+            <article>
+
+                <div class="e_slide">
+                    <div class="s_wrap">
+                        <figure>
+                        <img src="./image/event02.png" alt="이벤트1">
+                        <figcaption>
+                        <span>진행중</span>
+                         <p>넷플릭스 2월 신작을 보고 인증해 보세요! 넷플릭스 세트 증정!</p>
+                         <p class="date">2023. 02. 01 ~ 2023. 02. 28</p>
+                        </figcaption>
+                        </figure>
+
+                        <figure>
+                        <img src="./image/event01.jpg" alt="이벤트2">
+                        <figcaption>
+                        <span>진행중</span>
+                        <p>신작 TUDUM 보고 인증하면 선물이 팡팡!</p>
+                        <p class="date">2023. 02. 12 ~ 2023. 02. 28</p>
+                    </figcaption>
+                   </figure>
+
+                    <figure>
+                        <img src="./image/event03.png" alt="이벤트3">   
+                    <figcaption>
+                        <span>진행중</span>
+                        <p>통신사 KT 이용 시 무료 이용권 3개월 더!</p>
+                        <p class="date">2022. 01. 01 ~ 2023. 03. 31</p>
+                    </figcaption>
+                    </figure>
+                    </div>
+
+                    <img src="./image/left-arrow.png" alt="왼쪽 버튼" class="left_btn">
+                    <img src="./image/right-arrow.png" alt="오른쪽 버튼" class="right_btn">
+
+                </div>
+                
+
+            </article>
+
+        </section>
+        <section id="about">
+            <h2>About Netflix</h2>
+            <article>
+                <ul class="a_table">
+                <li>
+                    <a href="#none">
+                        <img src="./image/about_brand.png" alt="넷플릭스 브랜드 스토리">
+                        <div class="a_title">Netflix 브랜드 스토리</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#none">
+                        <img src="./image/about_global.jpg" alt="넷플릭스 글로벌">
+                        <div class="a_title">Global Netflix</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#none">
+                        <img src="./image/about_recruit.png" alt="넷플릭스 채용">
+                        <div class="a_title">Netflix 채용</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#none">
+                        <img src="./image/about_투자문의.jpg" alt="넷플릭스 투자 문의">
+                        <div class="a_title">Netflix 투자 문의</div>
+                    </a>
+                </li>
+                </ul>
+                
+                <p class="more_box">
+                    <a href="#none" title="더보기">더보기</a>
+                </p>
+                <div id="list">
+
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <article>
+        <ul class="flex">
+            <li><a href="">고객센터</a></li>
+            <li><a href="">개인정보처리방침</a></li>
+            <li><a href="">서비스 약관</a></li>
+            <li><a href="">쿠키 설정</a></li>
+        </ul>
+        
+        <div class="subs flex">
+            <input type="email" name="구독이메일" id="subs_email" placeholder="구독하실 이메일을 입력해 주세요.">
+            <input type="submit" name="구독버튼" id="subs_btn" value="subs">
+        </div>
+        
+        <address>2023 &copy; Netflix</address>
+        </article>
+
+        <img src="./image/right-arrow.png" alt="맨위로" class="top_btn">
+    </footer>
+</body>
+</html>

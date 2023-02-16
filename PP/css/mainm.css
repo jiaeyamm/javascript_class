@@ -1,0 +1,26 @@
+.gnb {
+    display: none;
+}
+
+.toggle {
+    position: fixed;
+    right: 10px;
+    top: 60px;
+}
+
+.toggle span {
+    background-color: var(--bgcolor02);
+    display: block;
+    width: 30px;
+    height: 5px;
+    margin: 5px;
+}
+
+
+.first {
+    transform: rotate(45deg);
+}
+
+.three {
+    transform: rotate(-45deg);
+}

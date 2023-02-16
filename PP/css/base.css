@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap');
+
+* {
+    font-family: 'Noto Sans KR', sans-serif; 
+}
+
+:root {
+    --b-size: 12px;
+    --t-size01: 14px;
+    --t-size02: 16px;
+    --h-size01: 36px;
+    --bgcolor01: #141414;
+    --bgcolor02: #E50914;
+    --bgcolor03: #676161;
+    --t-color01: #fff;
+    --t-color02: #141414;
+    --t-color03: #E50914;
+    --m-auto: 0px auto;
+    --margin01: 50px 0px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--t-color01);
+}
+
+body {
+    background: var(--bgcolor01);
+}
+
+h2 {
+    color: var(--t-color01);
+    font-size: 36px;
+}

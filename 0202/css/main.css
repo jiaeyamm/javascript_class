@@ -718,3 +718,10 @@ address {
     padding-top: 20px;
 }
 
+
+/* 이벤트 서식 */
+
+#event article {
+    width: 1200px;
+    margin: 20px auto;
+}
