@@ -1,0 +1,20 @@
+* 테이블에 적용하는 클래스 서식들
+-table태그---------------------------------
+.table
+.table table-striped(짝수행마다 배경색 적용)
+.table table-bordered(셀 테두리선 삽입)
+.table table-hover(마우스 오버시 색상변경)
+.table table-condensed(셀 안쪽 여백을 반으로 줄여줌)
+.table table-striped table-bordered table-hover table-condensed
+
+-tr, th, td태그---------------------------------
+.active (마우스오버시 색상적용)
+.success
+.info
+.warning
+.danger
+
+-반응형테이블----------------------------------
+div태그 .table-responsive
+table태그 .table
+

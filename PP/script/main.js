@@ -68,7 +68,37 @@ $(function() {
         })
     })
 
+const newTap = $('.new_tap li a');
+const newTrailer = $('#new .trailer .new_intro');
+
+
+newTap.click(function() {
+
+    $(this).addClass('on').parent().siblings().find('a').removeClass('on');
+
+    return false;
+
+    for(let i = 0; i <= newTap.length; i++) {
+        
+    }
+    
+}
+
+
+)
+
+
+
+
 });
+
+// 탭 이벤트
+
+
+
+
+
+
 
 // 이벤트 슬라이드 
 
