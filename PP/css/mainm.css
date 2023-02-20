@@ -1,40 +1,4 @@
 
-.toggle {
-    position: fixed;
-    right: 20px;
-    top: 60px;
-    z-index: 55555;
-    box-sizing: border-box;
-}
-
-.toggle span {
-    background-color: var(--bgcolor02);
-    display: block;
-    width: 35px;
-    height: 5px;
-    margin: 5px;
-    transition: 0.3s;
-}
-
-
-.none {
-    display: none!important;
-}
-
-.first {
-    transform: rotate(45deg);
-    position: absolute;
-    top: 5px;
-    right: 0px;
-
-}
-
-.three {
-    transform: rotate(-45deg);
-    position: absolute;
-    top: 5px;
-    right: 0px;
-}
 
 
 section {
@@ -54,13 +18,14 @@ main section::after {
 }
 
 #visual_slide, #new {
+    width: 100%;
     position: relative;
 }
 
 #visual_slide::after {
     content: '';
     display: block;
-    padding-bottom: 200px;
+    padding-bottom: 40px;
 }
 
 .box > h2 {
@@ -68,15 +33,16 @@ main section::after {
     margin-bottom: 20px;
 }
 
+#visual_slide .slide_img img {
+    width: 100%;
+}
 
 .slide_img {
     overflow: hidden;
     position: absolute;
-    left: 30%;
-    transform: translateX(-50%);
 }
 
-.slide_img:nth-child(2) {
+/* .slide_img:nth-child(2) {
     transform: translateX(-350px);
     z-index: 334;
 }
@@ -123,7 +89,7 @@ main section::after {
 
 .slide_img:first-child {
     z-index: 335;
-}
+} */
 
 .slide_wrap {
     position: relative;
@@ -132,15 +98,12 @@ main section::after {
 .slide_wrap::after {
     content: '';
     display: block;
-    padding-bottom: 400px;
+    padding-bottom: 250px;
 }
 
 .slide_tab {
-    position: absolute;
-    right: 1%;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 8888;
+    justify-content: center;
+    margin-bottom: 50px;
 }
 
 .slide_tab li {
@@ -148,9 +111,10 @@ main section::after {
     height: 15px;
     border-radius: 50%;
     background: #A7A5A5;
-    margin: 10px 0px;
+    margin: 30px 5px;
     cursor: pointer;
 }
+
 
 .slideZ {
     z-index: 4444;
@@ -167,8 +131,9 @@ main section::after {
 }
 
 iframe {
-    width: 560px;
-    height: 315px;
+    max-width: 560px;
+    max-height: 315px;
+    padding-bottom: 20px;
 }
 
 .trailer h3 {
@@ -193,15 +158,19 @@ iframe {
 .new_tap li {
     margin: 10px;
     width: 25%;
-    height: 25px;
+    height: 30px;
 }
 
 .new_tap li a {
     width: 100%;
     display: inline-block;
     background: var(--bgcolor03);
-    line-height: 30px;
+    line-height: 25px;
     text-align: center;
+}
+
+.new_tap li:nth-child(3) a {
+    line-height: 50px;
 }
 
 .new_title {
@@ -225,6 +194,7 @@ iframe {
 .p_box > h3 {
     color: var(--t-color01);
     margin: 15px 0px 40px 0px;
+    padding: 0px 0px 30px 0px;
 }
 
 .p_box p:last-of-type{
@@ -251,10 +221,11 @@ iframe {
 
 .contents_list ul {
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .contents_list ul li {
-    width: 200px;
+    max-width: 150px;
     margin: 15px;
 }
 
@@ -264,41 +235,83 @@ iframe {
 
 .more {
     display: block;
-    width: 1080px;
-    margin: 0px auto;
+    width: 98%;
     text-align: right;
 }
 
+.more::after {
+    margin-left: 5px;
+    content: ' >';
+    display: inline-block;
+    font-size: 1rem;
+
+}
 /*
 뉴스룸 서식 */
 
+#newsroom {
+    margin: 50px 0px;
+}
+
+
+#newsroom article{
+    padding-top: 50px;
+}
+
+#newsroom article ul {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
 #newsroom ul li {
+    font-size: 0.8rem;
     text-align: center;
+    margin: 15px 10px;
+    line-height: 1.2rem;
+    position: relative;
 }
 
-#newsroom ul li div {
-    width: 330px;
+#newsroom ul li .news_box {
+    width: 200px;
     background: var(--t-color01);
+    height: 440px;    
 }
 
 
-#newsroom ul li div img {
+#newsroom ul li .news_box img {
     padding-top: 20px;
     margin: 0px auto;
+    width: 150px;
+    height: 170px;
 }
+
+#newsroom ul li .news_box h4 {
+    padding: 20px 0px;
+}
+
+#newsroom ul li .news_box .f_box {
+        position: absolute;
+        width: 200px;
+        height: 50px;
+        bottom: 0px;
+        background: var(--bgcolor02);
+}
+
 
 /* 이벤트 서식 */
 
 
 #event article {
     margin: 30px auto;
-    width: 1200px;
+    width: 100%;
     padding: 40px 0px;
     position: relative;
 }
 
 .s_wrap {
-    width: 3600px;
+    width: 300%;
     display: flex;
     overflow: hidden;
     transition: 1.0s;
@@ -306,43 +319,45 @@ iframe {
 }
 
 #event figure {
-    width: 1200px;
-    display: flex;
+    width: 100%;
     background-color: var(--t-color01);
 }
 
 #event .e_slide {
-    width: 1200px;
+    width: 100%;
     margin: 0px auto;
     overflow: hidden;
 }
 
 #event figure img {
-    width: 740px;
+    max-width: 100%;
 }
 
 #event figure figcaption {
-    width: 460px;
+    width: 100%;
+    height: 180px;
     color: var(--t-color02);
     padding: 10px 20px;
     box-sizing: border-box;
 } 
 
 #event figure figcaption span {
+    display: inline-block;
+    margin-top: 20px;
     background-color : var(--t-color03);
      padding : 4px 8px;
      color: var(--t-color01);
 }
 
 #event figure figcaption p {
-    line-height: 25px;
+    line-height: 2rem;
     font-weight: 500;
-    padding-top: 100px;
+    padding: 10px 0px;
 }
 
 #event figure figcaption .date {
     color: var(--t-color03);
-    font-size: 18px;
+    font-size: 1rem;
     font-weight: normal;
 }
 
@@ -353,11 +368,11 @@ iframe {
 }
 
 #event .left_btn {
-    left : -50px;
+    left : 0px;
 }
 
 #event .right_btn {
-    right: -50px;
+    right: 0px;
 }
 
 #about {
@@ -368,20 +383,14 @@ iframe {
 }
 
 #about article {
-    max-width: 1200px;
+    width: 100%;
     margin: 50px auto;
 }
 
-#about .a_table {
-    max-width: 1200px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    place-items: center;
-    row-gap: 70px;
-}
 
 #about .a_table li {
-    width: 350px;
+    margin: 25px auto;
+    max-width: 350px;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -393,17 +402,12 @@ iframe {
 
 #about .a_table li div {
     width: 100%;
-    height: 0px;
+    height: 80px;
     background: rgba(0, 0, 0,.7);
     line-height: 80px;
     position: absolute;
     bottom: 0px;
     font-size: 18px;
-}
-
-#about .a_table li:hover div {
-    height: 80px;   
-    transition: 0.7s;
 }
 
 

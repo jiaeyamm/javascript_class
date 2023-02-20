@@ -22,20 +22,6 @@
         <script src="./script/prefixfree.min.js"></script>
         <script src="./script/common.js" defer></script>
         <script src="./script/main.js" defer></script>
-        <script>
-            // 배열 객체를 사용하여 스마트폰의 종류값을 넣어준다.
-            let mobile = ['Android', 'iPhone', 'iPad', 'SAMSUNG', 'BlackBerry', 'Window CE', 'MOT', 'SonyEricsson', 'Nokia'];
-        
-            if(document.URL.match('move_pc_screen') != null) mobile = null;
-            // 만약에 위 배열 값 개수 만큼 반복하여 사용자가 접속한 스마트폰의 종류를 체크하여 맞다면 아래 내용을 실행한다.
-
-            for(let i in mobile) {
-                if(navigator.userAgent.match(mobile[i]) != null) {
-                    location.href='http://jiaeyamm33.dothome.co.kr/html5/PP/mmindex.html';
-                    break;
-                }
-            }
-        </script>
 </head>
 <body>
     <header class="flex">
@@ -128,10 +114,9 @@
                     <img src="./image/top_10_10.jpg" alt="top10 트롤리">
                 </div>
 
-                <ul class="slide_btn">
-                    <li><img src="./image/left-arrow.png" alt="왼쪽 슬라이드로 이동"></li>
-                    <li><img src="./image/right-arrow.png" alt="오른쪽 슬라이드로 이동"></li>
-                </ul>
+                    <img src="./image/left-arrow.png" alt="왼쪽 슬라이드로 이동" class="slide_l_btn"></li>
+                    <img src="./image/right-arrow.png" alt="오른쪽 슬라이드로 이동" class="slide_r_btn">
+            
             </div>
 
             <ul class="slide_tab">
@@ -155,75 +140,30 @@
             <nav>
                 <ul class="new_tap flex">
                     <li>
-                        <a href="#" title="더 글로리 Part.2" 
-                        data-="" class="on">
+                        <a href="#the_glory" title="더 글로리 Part.2" class="on">
                         더 글로리 Part.2
                         </a>
-                        <div class="new_intro the_glory flex">
-                            <div class="i_box">
-                            <h3 class="new_title">Trailer</h3>
-                            <iframe src="https://www.youtube.com/embed/fk8vvmHIWAA" title="더 글로리 Part.2 예고편" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                            <span>19+</span>
-                            </div>
-                            <div class="p_box">
-                            <h3>더 글로리 Part.2</h3>
-                            <p><span class="bold">출연</span> 송혜교, 임지연, 이도현, 정성일 <span class="bold">연출</span> 김은숙 <span class="bold">감독</span> 안길호 </p>
-                            <p>고등학교 동급생들의 지독한 괴롭힘, 하지만 도움을 청할 곳은 그 어디에도 없다.<br>그렇게 절망의 늪에 빠진 문동은이 어느 날 새로운 삶의 목표를 발견한다.<br>가해자들에게 바치는 처절하고 치밀한 복수극, 준비는 끝났다.<br>본격적으로 그들에게 복수할 시간이다.</p>
-                             <p>드라마 <span class="bold">장르</span> 범죄, 스릴러, 추리 </p>    
-                            </div>
-                            </div>   
-                            </div>
                     </li>
                     <li>
-                        <a href="#" title="Luther : Fallen " 
-                        data-="">
+                        <a href="#luther" title="Luther : Fallen ">
                         Luther : Fallen
                         </a>
-                        <div class="new_intro luther flex none">
-                            <div class="i_box">
-                            <h3 class="new_title">Trailer</h3>
-                            <iframe src="https://www.youtube.com/embed/3XnoFeolgRY" title="루더 태양의 몰락" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                            <span>19+</span>
-                            </div>
-                            <div class="p_box">
-                            <h3>루더 : 태양의 몰락</h3>
-                            <p><span class="bold">출연</span> 이드리스 엘바, 앤디 서키스, 신시아 에리보 <span class="bold">연출</span> 김은숙 <span class="bold">감독</span> 제이미 페인 </p>
-                            <p><루더:태양의 몰락>은 수상 경력을 자랑하는 TV시리즈를 영화로<br>재구성하여 이야기를 이어간다. 잔인한 연쇄 살인마가 활개를 치고 있는 런던.<br>실력은 뛰어나지만 불명예스러운 상황에 처한 형사 존 루더는 철창 안에 갇혀 이를 지켜본다.<br>범인에게 조롱감이 된 루더는 감옥을 탈출하기로 결심한다.</p>
-                             <p>영화 <span class="bold">장르</span> 범죄, 스릴러 </p>    
-                            </div>
-                            </div>   
                     </li>
                     <li>
-                        <a href="#" title="길복순" 
+                        <a href="#boxsoon" title="길복순" 
                         data-="">
                         길복순
                         </a>
-                        
-                <div class="new_intro boxsoon flex none">
-                    <div class="i_box">
-                    <h3 class="new_title">Trailer</h3>
-                    <iframe src="https://www.youtube.com/embed/d00IrfSO1GI" title="루더 태양의 몰락" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    <span>19+</span>
-                    </div>
-                    <div class="p_box">
-                    <h3>길복순</h3>
-                    <p><span class="bold">출연</span> 전도연, 설경구, 김시아, 이솜 <span class="bold">연출</span> 변성현 <span class="bold">감독</span> 변성현 </p>
-                    <p>회사에서 이름난 암살자. 집에선 십대 딸을 둔 싱글맘. 죽이는 일?<br>
-                    그거야 가장 쉬운 일이지. 진짜 어려운 건 애 키우는 일이지.
-                    </p>
-                     <p>영화 <span class="bold">장르</span> 범죄, 스릴러 </p>    
-                    </div>
-                    </div>   
                     </li>
                     <li>
-                        <a href="#" title="Murder Mystery2" 
+                        <a href="#murder" title="Murder Mystery2" 
                         data-="">
                         Murder Mystery2
                         </a>
                     </li>
                 </ul>
             </nav>
-            <div class="new_intro the_glory flex">
+            <div class="new_intro the_glory flex" id="the_glory">
             <div class="i_box">
             <h3 class="new_title">Trailer</h3>
             <iframe src="https://www.youtube.com/embed/fk8vvmHIWAA" title="더 글로리 Part.2 예고편" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -236,60 +176,55 @@
              <p>드라마 <span class="bold">장르</span> 범죄, 스릴러, 추리 </p>    
             </div>
             </div>   
-            </div>
-
-            <div class="new_intro luther flex none">
-                <div class="i_box">
-                <h3 class="new_title">Trailer</h3>
-                <iframe src="https://www.youtube.com/embed/3XnoFeolgRY" title="루더 태양의 몰락" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <span>19+</span>
-                </div>
-                <div class="p_box">
-                <h3>루더 : 태양의 몰락</h3>
-                <p><span class="bold">출연</span> 이드리스 엘바, 앤디 서키스, 신시아 에리보 <span class="bold">연출</span> 김은숙 <span class="bold">감독</span> 제이미 페인 </p>
-                <p><루더:태양의 몰락>은 수상 경력을 자랑하는 TV시리즈를 영화로<br>재구성하여 이야기를 이어간다. 잔인한 연쇄 살인마가 활개를 치고 있는 런던.<br>실력은 뛰어나지만 불명예스러운 상황에 처한 형사 존 루더는 철창 안에 갇혀 이를 지켜본다.<br>범인에게 조롱감이 된 루더는 감옥을 탈출하기로 결심한다.</p>
-                 <p>영화 <span class="bold">장르</span> 범죄, 스릴러 </p>    
-                </div>
-                </div>   
     
-
-                <div class="new_intro boxsoon flex none">
+            <div class="new_intro luther flex none" id="luther">
                     <div class="i_box">
                     <h3 class="new_title">Trailer</h3>
-                    <iframe src="https://www.youtube.com/embed/d00IrfSO1GI" title="루더 태양의 몰락" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/3XnoFeolgRY" title="루더 태양의 몰락" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     <span>19+</span>
                     </div>
                     <div class="p_box">
-                    <h3>길복순</h3>
-                    <p><span class="bold">출연</span> 전도연, 설경구, 김시아, 이솜 <span class="bold">연출</span> 변성현 <span class="bold">감독</span> 변성현 </p>
-                    <p>회사에서 이름난 암살자. 집에선 십대 딸을 둔 싱글맘. 죽이는 일?<br>
-                    그거야 가장 쉬운 일이지. 진짜 어려운 건 애 키우는 일이지.
-                    </p>
+                    <h3>루더 : 태양의 몰락</h3>
+                    <p><span class="bold">출연</span> 이드리스 엘바, 앤디 서키스, 신시아 에리보 <span class="bold">연출</span> 김은숙 <span class="bold">감독</span> 제이미 페인 </p>
+                    <p><루더:태양의 몰락>은 수상 경력을 자랑하는 TV시리즈를 영화로<br>재구성하여 이야기를 이어간다. 잔인한 연쇄 살인마가 활개를 치고 있는 런던.<br>실력은 뛰어나지만 불명예스러운 상황에 처한 형사 존 루더는 철창 안에 갇혀 이를 지켜본다.<br>범인에게 조롱감이 된 루더는 감옥을 탈출하기로 결심한다.</p>
                      <p>영화 <span class="bold">장르</span> 범죄, 스릴러 </p>    
+                    </div>
+                </div>   
+    
+    
+                <div class="new_intro boxsoon flex none" id="boxsoon">
+                        <div class="i_box">
+                        <h3 class="new_title">Trailer</h3>
+                        <iframe src="https://www.youtube.com/embed/d00IrfSO1GI" title="길복순" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <span>19+</span>
+                        <iframe src="https://www.youtube.com/embed/fk8vvmHIWAA" title="더 글로리 Part.2 예고편" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                        <div class="p_box">
+                        <h3>길복순</h3>
+                        <p><span class="bold">출연</span> 전도연, 설경구, 김시아, 이솜 <span class="bold">연출</span> 변성현 <span class="bold">감독</span> 변성현 </p>
+                        <p>회사에서 이름난 암살자. 집에선 십대 딸을 둔 싱글맘. 죽이는 일?<br>
+                        그거야 가장 쉬운 일이지. 진짜 어려운 건 애 키우는 일이지.
+                        </p>
+                        <p>영화 <span class="bold">장르</span> 범죄, 스릴러 </p>    
                     </div>
                     </div>   
-      
-                
 
-                <div class="new_intro boxsoon flex none">
-                    <div class="i_box">
-                    <h3 class="new_title">Trailer</h3>
-                    <iframe src="https://www.youtube.com/embed/LM2F56uK0fs" title="Murder Mystery2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    <span>19+</span>
+                    <div class="new_intro murder flex none" id="murder">
+                        <div class="i_box">
+                        <h3 class="new_title">Trailer</h3>
+                        <iframe src="https://www.youtube.com/embed/d00IrfSO1GI" title="머더 미스터리2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <span>19+</span>
+                        <iframe src="https://www.youtube.com/embed/fk8vvmHIWAA" title="더 글로리 Part.2 예고편" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                        <div class="p_box">
+                        <h3>길복순</h3>
+                        <p><span class="bold">출연</span> 전도연, 설경구, 김시아, 이솜 <span class="bold">연출</span> 변성현 <span class="bold">감독</span> 변성현 </p>
+                        <p>회사에서 이름난 암살자. 집에선 십대 딸을 둔 싱글맘. 죽이는 일?<br>
+                        그거야 가장 쉬운 일이지. 진짜 어려운 건 애 키우는 일이지.
+                        </p>
+                        <p>영화 <span class="bold">장르</span> 범죄, 스릴러 </p>    
                     </div>
-                    <div class="p_box">
-                    <h3>Murder Mystery 2</h3>
-                    <p><span class="bold">출연</span> 아담 샌들러, 재니퍼 애니스틴 <span class="bold">연출</span> 제이머 게어릭 <span class="bold">감독</span> 제이머 게어릭 </p>
-                    <p>첫번째 미스테리 살인 사건 이후 4년 뒤, 닉과 오드리는<br> 하루 종일 자신들의 소속인 
-                        에어전시를 위해 일하는 탐정이 되었다.<br>또다시 미스테리한 사건이 발생하면서
-                        이상한 일에 휘말리게 된다. <br>
-            
-                    </p>
-                     <p>영화 <span class="bold">장르</span> 범죄, 스릴러 </p>    
-                    </div>
-                </div>   
-    
-        
+                    </div>   
 
             </article>
             
@@ -393,41 +328,64 @@
         </section>
         <section id="newsroom">
             <h2>NEWSROOM</h2>
-            <ul class="news_list">
+            <article>
+                <ul class="news_list flex">
                 <li>
                     <div class="news_box">
                         <img src="./image/newroom_01.jpg" alt="<살인자ㅇ난감>제작 확정">
                         <h4><살인자o난감>제작 확정</h4>
                         <div></div>
+                        <p>우연히 살인을 시작하게 된 평범한 남자와<br> 그를 지독하게 쫓는 형사의 
+                            이야기.<br><br><br> 최우식, 손석구 이희준이<br> ‘살인자ㅇ난감’으로 뭉칩니다.
+                        </p>
+                        <div class="f_box">
+                        </div>
                     </div>
                 </li>
                 <li>
-                    <div>
-                        <img src="" alt="">
-                        <h4></h4>
-                        <div></div>
+                    <div class="news_box">
+                        <img src="./image/newsroom_02.jpg" alt="<로기완>제작 확정">
+                        <h4><로기완>제작 확정</h4>
+                        <p>
+                            살아남고 싶어 하는 탈북자 로기완,<br> 더 이상 삶의 의미를 찾지 못하는 마리.<br> 두 남녀가 벨기에에서 만납니다. 
+
+                            <br><br><br>
+                            <로기완>, 오직 넷플릭스에서.
+                        </p>
+                        <div class="f_box">
+                        </div>
                     </div>
                 </li>
                 <li>
-                    <div>
-                        <img src="" alt="">
-                        <h4></h4>
-                        <div></div>
+                    <div class="news_box">
+                        <img src="./image/newsroom_03.png" alt="<살인자ㅇ난감>제작 확정">
+                        <h4>영화 <페어 플레이> 스트리밍권 확보</h4>
+                        <p>넷플릭스가 선댄스영화제 화제작<br> <페어 플레이>의 전 세계 스트리밍 권리를<br>
+                            확보했다. 출연진은 브리저튼으로 유명한<br>
+                            피비 디네버와<br>잘생긴 어쩌구 저쩌구 배우로<br>취향 저격일 듯 꿀잼각
+                        </p>
+                        <div class="f_box">
+                        </div>
                     </div>
                 </li>
-                <li>
-                    <div>
-                        <img src="" alt="">
-                        <h4></h4>
-                        <div></div>
+                  <li>
+                    <div class="news_box">
+                        <img src="./image/newsroom_04.jpg" alt="<경성 크리처>제작 확정">
+                        <h4><경성 크리처>제작 확정</h4>
+                        <p>1945년 경성, 탐욕 위에 태어난 괴물과<br> 맞서는 이들의 뜨거운 이야기.<br>
+                            박서준, 한소희, 수현,<br> 김해숙, 조한철, 위하준이 뭉칩니다. 
+                            <br><br>‘경성크리처', 오직 넷플릭스에서
+                        </p>
+                        <div class="f_box">
+                        </div>
                     </div>
                 </li>
             </ul>
+        </article>
         </section>
         <section id="event">
             <h2>Event</h2>
             <article>
-
                 <div class="e_slide">
                     <div class="s_wrap">
                         <figure>
@@ -438,7 +396,6 @@
                          <p class="date">2023. 02. 01 ~ 2023. 02. 28</p>
                         </figcaption>
                         </figure>
-
                         <figure>
                         <img src="./image/event01.jpg" alt="이벤트2">
                         <figcaption>
@@ -447,7 +404,6 @@
                         <p class="date">2023. 02. 12 ~ 2023. 02. 28</p>
                     </figcaption>
                    </figure>
-
                     <figure>
                         <img src="./image/event03.png" alt="이벤트3">   
                     <figcaption>
@@ -457,15 +413,11 @@
                     </figcaption>
                     </figure>
                     </div>
-
                     <img src="./image/left-arrow.png" alt="왼쪽 버튼" class="left_btn">
                     <img src="./image/right-arrow.png" alt="오른쪽 버튼" class="right_btn">
-
                 </div>
                 
-
             </article>
-
         </section>
         <section id="about">
             <h2>About Netflix</h2>
@@ -501,7 +453,6 @@
                     <a href="#none" title="더보기">더보기</a>
                 </p>
                 <div id="list">
-
                 </div>
             </article>
         </section>
@@ -522,7 +473,6 @@
         
         <address>2023 &copy; Netflix</address>
         </article>
-
         <img src="./image/right-arrow.png" alt="맨위로" class="top_btn">
     </footer>
 </body>

@@ -39,7 +39,6 @@ footer {
     right: 10%;
 }
 
-
 .gnb li {
     padding: 0px 15px;
 }
@@ -130,4 +129,8 @@ footer .top_btn {
     border-radius: 50%;
     display: none;
     cursor: pointer;
+}
+
+.absolute {
+    position: absolute;
 }

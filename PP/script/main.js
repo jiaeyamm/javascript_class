@@ -68,6 +68,9 @@ $(function() {
         })
     })
 
+    
+
+
 const newTap = $('.new_tap li a');
 const newTrailer = $('#new .trailer .new_intro');
 
@@ -79,7 +82,9 @@ newTap.click(function() {
     return false;
 
     for(let i = 0; i <= newTap.length; i++) {
-        
+        for(let j= 0; j<= newTrailer.length; j++) {
+            
+        }
     }
     
 }
@@ -94,6 +99,9 @@ newTap.click(function() {
 
 // 탭 이벤트
 
+const tabList = document.querySelectorAll('.trailer .new_tap li a');
+const tv = document.querySelectorAll('#new .new_intro');
+let tvR = '';
 
 
 
