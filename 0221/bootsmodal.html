@@ -21,41 +21,35 @@
             text-indent: 5px;
         }
 
-        .modal-body {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-        .modal-content {
-            height: 400px;
-        }
+
         a {
-            display: block;
             line-height: 50px!important;
             color: darkgrey !important;
         }
 
         .modal-header {
-            border: none;
-            padding-top: 90px;
+            padding-top: 50px;
             color: gray;
-            position: relative;
+        }
+
+        .modal_border {
+            width: 100px;
+            height: 100px;
+            top: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            line-height: 125px;
         }
 
         i.fa-user {
-            font-size: 40px;
-            width: 70px;
-            color: black;
-            height: 70px;
-            text-align: center;
+            font-size: 70px;
+            color: darkgray;
             line-height: 60px;
-            border-radius: 50%;
-            border: 5px solid cyan;
-            position: absolute;
-            top: -35px;
-            left: 50%;
-            transform: translateX(-50%);
-            
+        }
+
+        .btn-close {
+            top: 25px;
+            right: -150px;
         }
     </style>
 </head>
@@ -67,10 +61,13 @@
 
     
      <div class="modal" tabindex="-1" id="exampleModal">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header position-relative border-0">
+                <div class="border border-5 modal_border position-absolute rounded-circle text-center">
                 <i class="fa-solid fa-user"></i>
+                </div>
+                <button type="button" class="btn-close float-end position-absolute" data-bs-dismiss="modal" aria-label="Close" ></button>
               <h5 class="modal-title 
               text-center">Member Login</h5>
             </div>
@@ -79,7 +76,7 @@
               <input type="password" class="border-1" placeholder="Password">
               <input type="button" value="Sign in" class="btn btn-info">
             </div>
-                <a href="#" title="패스워드 찾기" class="btn btn-light">
+                <a href="#" title="패스워드 찾기" class="btn btn-light d-inline-block">
                     Forget Password?
                 </a>
             </div>
