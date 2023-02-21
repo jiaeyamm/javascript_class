@@ -181,6 +181,17 @@ iframe {
     background: var(--bgcolor03);
 }
 
+.tab_item {
+    width: 1200px;
+    margin: 0px auto;
+    display: none;
+}
+
+.current {
+    display: block;
+}
+
+
 .new_title {
     color: var(--t-color03);
 }

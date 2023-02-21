@@ -29,13 +29,9 @@ $(function() {
     /*
     $(window).scroll(function() {
         let spos = $(this).scrollTop();
-
         console.log(spos);
-
         let dh = $(document).height();
-
         console.log(dh);
-
         if(dh/2 < spos) {
             $('.top_btn').fadeIn();
         } else {
@@ -77,33 +73,23 @@ const newTrailer = $('#new .trailer .new_intro');
 
 newTap.click(function() {
 
-    $(this).addClass('on').parent().siblings().find('a').removeClass('on');
+    $(this).addClass('on').parent().siblings().find('a').removeClass('on');				//선택자를 통해 tabs 메뉴를 클릭 이벤트를 지정해줍니다.
+		var tab_id = $(this).attr('data-tab');
+		//선택 되있던 탭의 current css를 제거하고 
+		$('#new .trailer .new_intro').removeClass('current');		
+							////선택된 탭에 current class를 삽입해줍니다.
+		$("#" + tab_id).addClass('current').siblings().removeClass('current');
 
-    return false;
+        return false;
+	})
 
-    for(let i = 0; i <= newTap.length; i++) {
-        for(let j= 0; j<= newTrailer.length; j++) {
-            
-        }
-    }
     
-}
-
-
-)
+})
 
 
 
-
-});
 
 // 탭 이벤트
-
-const tabList = document.querySelectorAll('.trailer .new_tap li a');
-const tv = document.querySelectorAll('#new .new_intro');
-let tvR = '';
-
-
 
 
 
